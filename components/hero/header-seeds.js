@@ -9,7 +9,7 @@ export const headerChild = [
     {
         title: "GAMING 4K",
         subtitle: "DESKTOP AND LAPTOPS",
-        btn: "Shop Now ->",
+        btn: "Shop Now",
         icon: "",
         image: "/header-pc.png"  
     }
