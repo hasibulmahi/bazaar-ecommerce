@@ -10,33 +10,7 @@ export const heroContent = [
     button: <BazaarButton />,
     image: "", // add image url here okay? we will use next image.
   },
-  {
-    subtitle1: `Life style collection`,
-    title: `Women`,
-    subtitle2: `Sale up to `,
-    subtitle3: `30% off`,
-    subtitle4: `Get free shipping on orders`,
-    button: <BazaarButton />,
-    image: "", // add image url here okay? we will use next image.
-  },
-  {
-    subtitle1: `Life style collection`,
-    title: `Women`,
-    subtitle2: `Sale up to `,
-    subtitle3: `30% off`,
-    subtitle4: `Get free shipping on orders`,
-    button: <BazaarButton />,
-    image: "", // add image url here okay? we will use next image.
-  },
-  {
-    subtitle1: `Life style collection`,
-    title: `Women`,
-    subtitle2: `Sale up to `,
-    subtitle3: `30% off`,
-    subtitle4: `Get free shipping on orders`,
-    button: <BazaarButton />,
-    image: "", // add image url here okay? we will use next image.
-  },
+  
   
 ];
 
