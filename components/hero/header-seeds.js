@@ -2,7 +2,7 @@ export const headerChild = [
     {
         title: "NEW ARRIVALS",
         subtitle: "SUMMER SALE 20 % OFF",
-        btn: "Shop Now ->",
+        btn: "Shop Now",
         icon: "",
         image: "/header-shoe.png"
     },
