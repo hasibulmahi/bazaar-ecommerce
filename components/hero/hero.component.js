@@ -91,7 +91,6 @@ function Hero(props) {
                   <Typography>{item.subtitle}</Typography>
                   <IconButton>{item.btn}</IconButton>
                   <Image src={item.image} width={100} height={100} alt="img" />
-                  
                 </Box>
               ))}
           </Grid>
