@@ -13,10 +13,14 @@ function SingleSlide({ item }) {
       }}
     >
       <Grid container>
-        <Grid sx={{
-          paddingLeft: "100px",
-          paddingTop: "140px"
-        }} item sm={6}>
+        <Grid
+          sx={{
+            paddingLeft: "100px",
+            paddingTop: "140px",
+          }}
+          item
+          sm={6}
+        >
           <Typography>{item.subtitle1}</Typography>
           <Typography>{item.title}</Typography>
           <Typography>
