@@ -37,7 +37,4 @@ export const heroContent = [
     button: <BazaarButton />,
     image: "", // add image url here okay? we will use next image.
   },
-  
-  
 ];
-
