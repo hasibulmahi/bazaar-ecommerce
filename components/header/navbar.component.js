@@ -130,7 +130,7 @@ function Navbar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Hasibul Mahi
+        Bazaar
       </Typography>
       <Divider />
       <List>
@@ -256,7 +256,10 @@ function Navbar(props) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar sx={{
+        bgcolor: "#FFF",
+        boxShadow: "none"
+      }} position="static">
         <Container>
           <Toolbar
             sx={{
@@ -300,7 +303,7 @@ function Navbar(props) {
                     sx={{
                       textTransform: "capitalize",
                       marginRight: "30px",
-                      color: "#FFF",
+                      color: "#000",
                     }}
                     key={i}
                     onClick={handleClickDropDown}
