@@ -21,13 +21,61 @@ function SingleSlide({ item }) {
           item
           sm={6}
         >
-          <Typography>{item.subtitle1}</Typography>
-          <Typography>{item.title}</Typography>
-          <Typography>
-            {item.subtitle2} {item.subtitle3}
+          <Typography
+            sx={{
+              fontSize: "30px",
+              fontWeight: "500",
+              color: "#2B3445"
+            }}
+          >
+            {item.subtitle1}
           </Typography>
-          <Typography>{item.subtitle4}</Typography>
-          <BazaarButton />
+          <Typography
+            sx={{
+              fontSize: "45px",
+              fontWeight: "700",
+              color: "#2B3445"
+            }}
+          >
+            {item.title}
+          </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: "30px",
+                fontWeight: "500",
+                color: "#2B3445"
+              }}
+            >
+              {item.subtitle2}
+            </Typography>
+            <Typography
+              sx={{
+                ml: "0.75rem",
+                fontSize: "30px",
+                fontWeight: "500",
+                color: "#D23F57",
+              }}
+            >
+              {item.subtitle3}
+            </Typography>
+          </Box>
+          <Typography sx={{
+            mb: 2
+          }}>{item.subtitle4}</Typography>
+          <BazaarButton buttonSx={{
+            backgroundColor: "#2B3445",
+            fontSize: "14px",
+            textTransform: "capitalize",
+            borderRadius: "0px",
+            px: "40px",
+            py: "12px"
+          }} />
         </Grid>
       </Grid>
 
