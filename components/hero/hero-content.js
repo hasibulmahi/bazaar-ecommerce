@@ -2,7 +2,7 @@ import BazaarButton from "../ui/button.component";
 
 export const heroContent = [
   {
-    subtitle1: `LIFE STYLE COLLECTION`,
+    subtitle1: `LIFESTYLE COLLECTION`,
     title: `WOMEN`,
     subtitle2: `SALE UP TO`,
     subtitle3: `30% OFF`,
@@ -11,7 +11,7 @@ export const heroContent = [
     image: "", // add image url here okay? we will use next image.
   },
   {
-    subtitle1: `LIFE STYLE COLLECTION`,
+    subtitle1: `LIFESTYLE COLLECTION`,
     title: `WOMEN`,
     subtitle2: `SALE UP TO`,
     subtitle3: `30% OFF`,
@@ -20,7 +20,7 @@ export const heroContent = [
     image: "", // add image url here okay? we will use next image.
   },
   {
-    subtitle1: `LIFE STYLE COLLECTION`,
+    subtitle1: `LIFESTYLE COLLECTION`,
     title: `WOMEN`,
     subtitle2: `SALE UP TO`,
     subtitle3: `30% OFF`,
@@ -29,7 +29,7 @@ export const heroContent = [
     image: "", // add image url here okay? we will use next image.
   },
   {
-    subtitle1: `LIFE STYLE COLLECTION`,
+    subtitle1: `LIFESTYLE COLLECTION`,
     title: `WOMEN`,
     subtitle2: `SALE UP TO`,
     subtitle3: `30% OFF`,
