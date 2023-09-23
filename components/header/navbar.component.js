@@ -256,10 +256,13 @@ function Navbar(props) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar sx={{
-        bgcolor: "#FFF",
-        boxShadow: "none"
-      }} position="static">
+      <AppBar
+        sx={{
+          bgcolor: "#FFF",
+          boxShadow: "none",
+        }}
+        position="static"
+      >
         <Container>
           <Toolbar
             sx={{
