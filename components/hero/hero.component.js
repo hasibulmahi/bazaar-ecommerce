@@ -85,7 +85,6 @@ function Hero(props) {
                     minWidth: "286px",
                     bgcolor: "#F3EFEC",
                     padding: "0px",
-                    
                   }}
                 >
                   <Typography>{item.title}</Typography>
