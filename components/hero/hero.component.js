@@ -75,7 +75,13 @@ function Hero(props) {
           </Grid>
           {/* Grid item end */}
           {/* Grid item start */}
-          <Grid item sm={2}>
+          <Grid
+            sx={{
+              paddingLeft: 5,
+            }}
+            item
+            sm={2}
+          >
             {headerChild &&
               headerChild.map((item, i) => (
                 <Box
