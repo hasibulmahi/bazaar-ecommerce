@@ -16,7 +16,7 @@ function SingleSlide({ item }) {
         <Grid
           sx={{
             paddingLeft: "100px",
-            paddingTop: "140px",
+            paddingTop: "110px",
           }}
           item
           sm={6}
@@ -88,8 +88,8 @@ function SingleSlide({ item }) {
       <Box
         sx={{
           position: "absolute",
-          right: 0,
-          top: 0,
+          right: "120px",
+          top: "30px",
         }}
       >
         <Image
