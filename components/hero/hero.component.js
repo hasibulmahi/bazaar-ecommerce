@@ -94,15 +94,23 @@ function Hero(props) {
                     padding: "0px",
                   }}
                 >
-                  <Divider/>
+                  <Divider />
                   <Typography>{item.title}</Typography>
                   <Typography>{item.subtitle}</Typography>
-                  
-                  <Box sx={{
-                    position: "absolute",
-                    right: 50,
-                    
-                  }}><Image src={item.image} width={100} height={100} alt="img" /></Box>
+
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      right: 50,
+                    }}
+                  >
+                    <Image
+                      src={item.image}
+                      width={100}
+                      height={100}
+                      alt="img"
+                    />
+                  </Box>
                   <IconButton>{item.btn}</IconButton>
                 </Box>
               ))}
