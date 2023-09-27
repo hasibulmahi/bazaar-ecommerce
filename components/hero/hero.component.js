@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Container,
+  Divider,
   Grid,
   IconButton,
   Typography,
@@ -87,16 +88,22 @@ function Hero(props) {
                 <Box
                   key={i}
                   sx={{
-                    minHeight: "232px",
+                    minHeight: "240px",
                     minWidth: "286px",
                     bgcolor: "#F3EFEC",
                     padding: "0px",
                   }}
                 >
+                  <Divider/>
                   <Typography>{item.title}</Typography>
                   <Typography>{item.subtitle}</Typography>
+                  
+                  <Box sx={{
+                    position: "absolute",
+                    right: 50,
+                    
+                  }}><Image src={item.image} width={100} height={100} alt="img" /></Box>
                   <IconButton>{item.btn}</IconButton>
-                  <Image src={item.image} width={100} height={100} alt="img" />
                 </Box>
               ))}
           </Grid>
