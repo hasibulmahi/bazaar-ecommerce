@@ -11,7 +11,11 @@ import {
 
 function Feature(props) {
   return (
-    <Container>
+    <Container sx={{
+      bgcolor: "#FFF",
+      mb: 5,
+      mt: 3,
+    }}>
       <Grid container>
         {featureItem &&
           featureItem.map((item, i) => (
