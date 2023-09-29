@@ -25,6 +25,8 @@ function Feature(props) {
               key={i}
               sx={{
                 display: "flex",
+                px: 3,
+                py: 2
               }}
             >
               <IconButton>{item.icon}</IconButton>
