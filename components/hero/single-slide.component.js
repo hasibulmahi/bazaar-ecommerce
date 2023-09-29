@@ -4,7 +4,6 @@ import React from "react";
 import BazaarButton from "../ui/button.component";
 
 function SingleSlide({ item }) {
-  console.log(item);
   return (
     <Box
       sx={{
@@ -72,16 +71,7 @@ function SingleSlide({ item }) {
           >
             {item.subtitle4}
           </Typography>
-          <BazaarButton
-            buttonSx={{
-              backgroundColor: "#2B3445",
-              fontSize: "14px",
-              textTransform: "capitalize",
-              borderRadius: "0px",
-              px: "40px",
-              py: "12px",
-            }}
-          />
+          <BazaarButton />
         </Grid>
       </Grid>
 
