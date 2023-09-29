@@ -13,10 +13,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SingleSlide from "./single-slide.component";
-import { heroContent } from "./hero-content";
+import { heroContent } from "./hero-item";
 import Image from "next/image";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
-import { headerChild } from "./header-seeds";
+import { heroChild } from "./hero-seeds";
 import BazaarButton from "../ui/button.component";
 
 function Hero(props) {
@@ -28,6 +28,9 @@ function Hero(props) {
     slidesToScroll: 1,
     className: "bazaar-hero-slider",
     arrows: false,
+    pauseOnHover: true,
+    autoplay: true,
+    autoplaySpeed: 2500,
     appendDots: (dots) => (
       <div
         style={{
@@ -55,70 +58,67 @@ function Hero(props) {
     ),
   };
   return (
-    <Box>
-      <Container>
-        <Grid container>
-          {/* Grid item start */}
-          <Grid item sm={10}>
-            <Slider {...settings}>
-              {heroContent.map((item, i) => (
-                <Box
-                  key={i}
-                  sx={{
-                    minHeight: "480px",
-                    bgcolor: "#F3EFEC",
-                  }}
-                >
-                  <SingleSlide item={item} />
-                </Box>
-              ))}
-            </Slider>
-          </Grid>
-          {/* Grid item end */}
-          {/* Grid item start */}
-          <Grid
-            sx={{
-              paddingLeft: 5,
-            }}
-            item
-            sm={2}
-          >
-            {headerChild &&
-              headerChild.map((item, i) => (
-                <Box
-                  key={i}
-                  sx={{
-                    minHeight: "240px",
-                    minWidth: "286px",
-                    bgcolor: "#F3EFEC",
-                    padding: "0px",
-                  }}
-                >
-                  <Divider />
-                  <Typography>{item.title}</Typography>
-                  <Typography>{item.subtitle}</Typography>
+    <Grid container spacing={2}>
+      {/* Grid item start */}
+      <Grid item sm={9}>
+        <Slider {...settings}>
+          {heroContent.map((item, i) => (
+            <Box
+              key={i}
+              sx={{
+                minHeight: "480px",
+                bgcolor: "#F3EFEC",
+              }}
+            >
+              <SingleSlide item={item} />
+            </Box>
+          ))}
+        </Slider>
+      </Grid>
+      {/* Grid item end */}
+      {/* Grid item start */}
+      <Grid
+        sx={
+          {
+            // paddingLeft: 5,
+          }
+        }
+        item
+        sm={3}
+      >
+        {heroChild &&
+          heroChild.map((item, i) => (
+            <Box
+              key={i}
+              sx={{
+                minHeight: "230px",
+                bgcolor: "#F3EFEC",
+                padding: "0px",
+                position: "relative",
+                marginBottom: 2,
+              }}
+            >
+              <Box >
+              <Typography>{item.title}</Typography>
+              <Typography>{item.subtitle1}</Typography>
+              <Typography>{item.subtitle2}</Typography>
+              <IconButton>{item.btn}</IconButton>
+              </Box>
 
-                  <Box
-                    sx={{
-                      position: "absolute",
-                      right: 50,
-                    }}
-                  >
-                    <Image
-                      src={item.image}
-                      width={100}
-                      height={100}
-                      alt="img"
-                    />
-                  </Box>
-                  <IconButton>{item.btn}</IconButton>
-                </Box>
-              ))}
-          </Grid>
-          {/* Grid item start */}
-        </Grid>
-      </Container>
-    </Box>
+              <Box
+                sx={{
+                  position: "absolute",
+                  right: 0,
+                  bottom: 0,
+                }}
+              >
+                <Image src={item.image} width={100} height={100} alt="img" />
+              </Box>
+            </Box>
+          ))}
+      </Grid>
+      {/* Grid item start */}
+    </Grid>
   );
 }
 
