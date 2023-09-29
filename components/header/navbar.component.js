@@ -250,7 +250,6 @@ function Navbar(props) {
     setDropDownEl(event.currentTarget);
   };
   const handleCloseDropDown = () => {
-    console.log("clicked");
     setDropDownEl(null);
   };
 
