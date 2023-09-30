@@ -9,13 +9,16 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import React from "react";
+import Rating from "@mui/material/Rating";
+import React, { useState } from "react";
 import { dealList } from "./deals.seeds";
 import Image from "next/image";
+import BazaarButton from "../ui/button.component";
 
 function Deals(props) {
+  const [value, setValue] = useState(2);
   return (
-    <>
+    <Box>
       <Box
         sx={{
           display: "flex",
@@ -62,14 +65,36 @@ function Deals(props) {
                     <Typography variant="h6">{item.title}</Typography>
                     <Typography>${item.price}</Typography>
                     <Typography>{item.totalRating}</Typography>
+                    <Rating
+                      name="simple-controlled"
+                      value={value}
+                      onChange={(event, newValue) => {
+                        setValue(newValue);
+                      }}
+                      sx={{}}
+                    />
                   </CardContent>
                 </CardActionArea>
-                <CardActions>{item.btn}</CardActions>
+                <CardActions>
+                  <BazaarButton
+                    text="Add to cart"
+                    buttonSx={{
+                      bgcolor: "transparent",
+                      border: "1px solid #D8E0E9",
+                      boxShadow: "none",
+                      color: "#4B566B",
+                      position: "relative",
+                      left: "50%",
+                      borderRadius: 1,
+                      transform: "translateX(-50%)",
+                    }}
+                  />
+                </CardActions>
               </Card>
             </Grid>
           ))}
       </Grid>
-    </>
+    </Box>
   );
 }
 
