@@ -96,13 +96,16 @@ function Hero(props) {
                 padding: "0px",
                 position: "relative",
                 marginBottom: 2,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "start",
               }}
             >
-              <Box >
-              <Typography>{item.title}</Typography>
-              <Typography>{item.subtitle1}</Typography>
-              <Typography>{item.subtitle2}</Typography>
-              <IconButton>{item.btn}</IconButton>
+              <Box sx={{}}>
+                <Typography>{item.title}</Typography>
+                <Typography>{item.subtitle1}</Typography>
+                <Typography>{item.subtitle2}</Typography>
+                <IconButton>{item.btn}</IconButton>
               </Box>
 
               <Box
