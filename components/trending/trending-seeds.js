@@ -15,5 +15,13 @@ export const trendingList = [
       icon: "",
       image: "/header-pc.png",
     },
+    {
+      title: "GAMING 4K",
+      subtitle1: "DESKTOP ",
+      subtitle2: "AND LAPTOPS",
+      btn: "Shop Now",
+      icon: "",
+      image: "/header-pc.png",
+    },
   ];
   
