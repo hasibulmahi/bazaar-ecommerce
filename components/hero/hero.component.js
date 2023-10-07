@@ -100,7 +100,7 @@ function Hero(props) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "start",
-                
+                color: "#2B3445",
               }}
             >
               <Box
@@ -135,13 +135,17 @@ function Hero(props) {
                     alignItems: "center",
                   }}
                 >
-                  <Typography sx={{
-                    fontSize: "15px"
-                  }}>{item.btn}</Typography>
+                  <Typography
+                    sx={{
+                      fontSize: "15px",
+                    }}
+                  >
+                    {item.btn}
+                  </Typography>
                   <IconButton>
                     <EastIcon
                       sx={{
-                        color: "black",
+                        color: "#2B3445",
                       }}
                       fontSize="small"
                     />
