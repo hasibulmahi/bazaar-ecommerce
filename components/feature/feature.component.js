@@ -29,10 +29,13 @@ function Feature(props) {
                 py: 2
               }}
             >
-              <IconButton>{item.icon}</IconButton>
+              <IconButton sx={{
+                mr: 2,
+                color: "#2B3445",
+              }}>{item.icon}</IconButton>
               <Box>
-                <Typography>{item.title}</Typography>
-                <Typography>{item.subtitle}</Typography>
+                <Typography color= "#2B3445"  fontSize={15} fontWeight="bold">{item.title}</Typography>
+                <Typography color="#7D879C" fontSize={14} fontWeight={300}>{item.subtitle}</Typography>
               </Box>
             </Grid>
           ))}
