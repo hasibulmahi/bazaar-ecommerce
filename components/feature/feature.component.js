@@ -11,11 +11,13 @@ import {
 
 function Feature(props) {
   return (
-    <Container sx={{
-      bgcolor: "#FFF",
-      mb: 5,
-      mt: 3,
-    }}>
+    <Container
+      sx={{
+        bgcolor: "#FFF",
+        mb: 5,
+        mt: 3,
+      }}
+    >
       <Grid container>
         {featureItem &&
           featureItem.map((item, i) => (
@@ -26,16 +28,24 @@ function Feature(props) {
               sx={{
                 display: "flex",
                 px: 3,
-                py: 2
+                py: 2,
               }}
             >
-              <IconButton sx={{
-                mr: 2,
-                color: "#2B3445",
-              }}>{item.icon}</IconButton>
+              <IconButton
+                sx={{
+                  mr: 2,
+                  color: "#2B3445",
+                }}
+              >
+                {item.icon}
+              </IconButton>
               <Box>
-                <Typography color= "#2B3445"  fontSize={15} fontWeight="bold">{item.title}</Typography>
-                <Typography color="#7D879C" fontSize={14} fontWeight={300}>{item.subtitle}</Typography>
+                <Typography color="#2B3445" fontSize={15} fontWeight="bold">
+                  {item.title}
+                </Typography>
+                <Typography color="#7D879C" fontSize={14} fontWeight={300}>
+                  {item.subtitle}
+                </Typography>
               </Box>
             </Grid>
           ))}
