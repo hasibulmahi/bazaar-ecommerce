@@ -77,15 +77,7 @@ function Hero(props) {
       </Grid>
       {/* Grid item end */}
       {/* Grid item start */}
-      <Grid
-        sx={
-          {
-            // paddingLeft: 5,
-          }
-        }
-        item
-        sm={3}
-      >
+      <Grid item sm={3}>
         {heroChild &&
           heroChild.map((item, i) => (
             <Box
