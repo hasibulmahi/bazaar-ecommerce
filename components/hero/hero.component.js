@@ -18,6 +18,7 @@ import Image from "next/image";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { heroChild } from "./hero-seeds";
 import BazaarButton from "../ui/button.component";
+import EastIcon from "@mui/icons-material/East";
 
 function Hero(props) {
   const settings = {
@@ -99,13 +100,53 @@ function Hero(props) {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "start",
+                
               }}
             >
-              <Box sx={{}}>
-                <Typography>{item.title}</Typography>
-                <Typography>{item.subtitle1}</Typography>
-                <Typography>{item.subtitle2}</Typography>
-                <IconButton>{item.btn}</IconButton>
+              <Box
+                sx={{
+                  ml: 4,
+                }}
+              >
+                <Typography
+                  sx={{
+                    fontSize: "15px",
+                  }}
+                >
+                  {item.title}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: "20px",
+                  }}
+                >
+                  {item.subtitle1}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: "20px",
+                  }}
+                >
+                  {item.subtitle2}
+                </Typography>
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <Typography sx={{
+                    fontSize: "15px"
+                  }}>{item.btn}</Typography>
+                  <IconButton>
+                    <EastIcon
+                      sx={{
+                        color: "black",
+                      }}
+                      fontSize="small"
+                    />
+                  </IconButton>
+                </Box>
               </Box>
 
               <Box
