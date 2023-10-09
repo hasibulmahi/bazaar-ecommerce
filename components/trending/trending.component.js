@@ -4,13 +4,18 @@ import Image from "next/image";
 import { Box, Grid, IconButton, Typography } from "@mui/material";
 import TrendingCard from "./tending-card";
 
-const trendingCardColor = ["#F4F7FB", "#2B3445", "#EDEBEC"];
+const trendingBgCardColor = ["#F4F7FB", "#2B3445", "#EDEBEC"];
+const trendingTextCardColor = ["#2B3445", "#FFF", "#2B3445"]
 
 function Trending({ tendingSx }) {
   return (
     <Grid
+      container
+      spacing={2}
       sx={{
         display: "flex",
+
+
       }}
     >
       {trendingList &&
@@ -23,7 +28,8 @@ function Trending({ tendingSx }) {
               btn={item.btn}
               cardImage={item.image}
               tendingSx={{
-                bgcolor: `${trendingCardColor[i]}`,
+                bgcolor: `${trendingBgCardColor[i]}`,
+                color: `${trendingTextCardColor[i]}`
               }}
             />
           </Grid>
