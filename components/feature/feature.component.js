@@ -43,7 +43,7 @@ function Feature(props) {
                 <Typography color="#2B3445" fontSize={15} fontWeight="bold">
                   {item.title}
                 </Typography>
-                <Typography color="#7D879C" fontSize={14} fontWeight={300}>
+                <Typography color="#7D879C" fontSize={14}>
                   {item.subtitle}
                 </Typography>
               </Box>
