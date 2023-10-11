@@ -42,7 +42,7 @@ function Hero(props) {
       </div>
     ),
     customPaging: (i) => (
-      <div
+      <Box
         style={{
           width: "30px",
           color: "blue",
@@ -55,7 +55,7 @@ function Hero(props) {
         >
           <FiberManualRecordIcon />
         </Button>
-      </div>
+      </Box>
     ),
   };
   return (
