@@ -15,7 +15,8 @@ function Category(props) {
             <CategoryItem
               categoryImage={item.image}
               categorySlug={item.slug}
-              categoryText={item.text}
+              categoryTitle={item.title}
+              
             />
           </Grid>
         ))}
