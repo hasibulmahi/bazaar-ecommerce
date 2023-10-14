@@ -5,7 +5,7 @@ import BazaarButton from "../ui/button.component";
 import { Box } from "@mui/material";
 import { common } from "@mui/material/colors";
 
-function CategoryItem({ categoryImage, categorySlug, categoryText }) {
+function CategoryItem({ categoryImage, categorySlug, categoryTitle }) {
   const [mouseHover, setMouseHover] = useState(false);
   return (
     <Box
@@ -40,7 +40,7 @@ function CategoryItem({ categoryImage, categorySlug, categoryText }) {
 
       <Link href={categorySlug} passHref>
         <BazaarButton
-          text={categoryText}
+          text={categoryTitle}
           className="  "
           buttonSx={{
             position: "absolute",
