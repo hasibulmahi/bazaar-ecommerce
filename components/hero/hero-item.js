@@ -25,7 +25,7 @@ export const heroContent = [
     subtitle2: `SALE UP TO`,
     subtitle3: `30% OFF`,
     subtitle4: `Get free Shipping on orders over $99.00`,
-   
+    button: <BazaarButton />,
     image: "", // add image url here okay? we will use next image.
   },
   {
