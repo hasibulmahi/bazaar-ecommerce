@@ -1,11 +1,11 @@
 import React from "react";
 import { trendingList } from "./trending-seeds";
 import Image from "next/image";
-import { Box, Grid, IconButton,  } from "@mui/material";
+import { Box, Grid, IconButton } from "@mui/material";
 import TrendingCard from "./tending-card";
 
 const trendingBgCardColor = ["#F4F7FB", "#2B3445", "#EDEBEC"];
-const trendingTextCardColor = ["#2B3445", "#FFF", "#2B3445"]
+const trendingTextCardColor = ["#2B3445", "#FFF", "#2B3445"];
 
 function Trending({ tendingSx }) {
   return (
@@ -14,8 +14,6 @@ function Trending({ tendingSx }) {
       spacing={2}
       sx={{
         display: "flex",
-
-
       }}
     >
       {trendingList &&
@@ -29,7 +27,7 @@ function Trending({ tendingSx }) {
               cardImage={item.image}
               tendingSx={{
                 bgcolor: `${trendingBgCardColor[i]}`,
-                color: `${trendingTextCardColor[i]}`
+                color: `${trendingTextCardColor[i]}`,
               }}
             />
           </Grid>
