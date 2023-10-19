@@ -50,7 +50,7 @@ export const productList = [
   {
     id: "23436fdgd875658ju",
     image: "/t-shirt.jpg",
-    title: "Premium T-Shirt - fashion product",
+    title: "Premium T-Shirt",
     price: "350",
     totalRating: 4,
     category: ["9234239jfdfg9893"],
