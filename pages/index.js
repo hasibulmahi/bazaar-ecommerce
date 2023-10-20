@@ -1,6 +1,7 @@
 import Category from "@/components/category/category.component";
 import Deals from "@/components/deals/deals.component";
 import Feature from "@/components/feature/feature.component";
+import Footer from "@/components/footer/footer.component";
 import Hero from "@/components/hero/hero.component";
 import Layout from "@/components/layout";
 import Offer from "@/components/offer/offer.component";
@@ -22,6 +23,7 @@ function Home(props) {
         <Product />
         <Offer />
         <Product />
+        <Footer />
       </Layout>
     </>
   );
