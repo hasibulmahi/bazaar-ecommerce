@@ -74,6 +74,7 @@ function Deals(props) {
               <Card
                 sx={{
                   maxWidth: "220px",
+                  py: 2
                 }}
               >
                 <CardActionArea>

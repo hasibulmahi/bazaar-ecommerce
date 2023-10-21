@@ -49,13 +49,39 @@ function Product(props) {
     <Box>
       <Grid container spacing={2}>
         <Grid item sm={2.4}>
-          <Box>
+          <Box
+            sx={{
+              bgcolor: "#FFF",
+              borderRadius: 1,
+              py: 4,
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: "17px",
+                fontWeight: "bold",
+                paddingLeft: 4,
+              }}
+            >
+              Electronics
+            </Typography>
             {categoryList &&
               categoryList.map((item, i) => {
                 return (
                   <ListItem onClick={(e) => setActiveCategory(item.id)}>
-                    <ListItemButton>
-                      <ListItemText primary={item.title} />
+                    <ListItemButton
+                      sx={{
+                        paddingTop: 0,
+                        paddingBottom: 0,
+                      }}
+                    >
+                      <Typography
+                        sx={{
+                          fontSize: "14px",
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
                     </ListItemButton>
                   </ListItem>
                 );
@@ -64,7 +90,13 @@ function Product(props) {
         </Grid>
 
         <Grid item sm={9.6}>
-          <Grid container spacing={2}>
+          <Grid
+            container
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            sx={{
+              height: "100%",
+            }}
+          >
             {categoryProducts &&
               [...categoryProducts].splice(0, 4).map((item, i) => (
                 <Grid item sm={3}>
@@ -72,6 +104,7 @@ function Product(props) {
                     key={i}
                     sx={{
                       maxWidth: "220px",
+                      height: "100%",
                     }}
                   >
                     <CardActionArea>
@@ -94,17 +127,38 @@ function Product(props) {
                             alt="img"
                           />
                         </Box>
-                        <Typography variant="h6">{item.title}</Typography>
-                        <Typography>${item.price}</Typography>
-                        <Typography>{item.totalRating}</Typography>
-                        <Rating
-                          name="simple-controlled"
-                          value={value}
-                          onChange={(event, newValue) => {
-                            setValue(newValue);
+                        <Typography variant="h5" fontSize={14}>
+                          {item.title}
+                        </Typography>
+                        <Typography fontFamily={14} fontWeight={600}>
+                          ${item.price}
+                        </Typography>
+                        <Box
+                          sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
                           }}
-                          sx={{}}
-                        />
+                        >
+                          <Rating
+                            name="simple-controlled"
+                            size="small"
+                            value={value}
+                            onChange={(event, newValue) => {
+                              setValue(newValue);
+                            }}
+                            sx={{}}
+                          />
+                          <Typography
+                            sx={{
+                              paddingLeft: 1,
+                              fontSize: "14px",
+                              color: "#7D879C",
+                            }}
+                          >
+                            {item.totalRating}
+                          </Typography>
+                        </Box>
                       </CardContent>
                     </CardActionArea>
                     <CardActions>
@@ -119,6 +173,7 @@ function Product(props) {
                           left: "50%",
                           borderRadius: 1,
                           transform: "translateX(-50%)",
+                          py: "2px",
                         }}
                       />
                     </CardActions>
@@ -130,11 +185,11 @@ function Product(props) {
         <Grid item sm={12}>
           <Box>
             {/* write your code and logic */}
-            {categoryProducts && categoryProducts.length > 4 && (
+            {/* {categoryProducts && categoryProducts.length > 4 && (
               <Button href={`/category/${categorySlug}`} variant="contained">
                 Show more
               </Button>
-            )}
+            )} */}
           </Box>
         </Grid>
       </Grid>

@@ -278,7 +278,7 @@ function Navbar(props) {
             >
               <MenuIcon />
             </IconButton>
-            <Image src="/bazaar-logo.png" width={100} height={50} alt="Logo" />
+            <Image src="/bazaar-logo.png" width={70} height={30} alt="Logo" />
             {/* <IconButton
               color="inherit"
               aria-label="open drawer"
