@@ -18,6 +18,7 @@ import EastIcon from "@mui/icons-material/East";
 
 function Deals(props) {
   const [value, setValue] = useState(2);
+
   return (
     <Box
       sx={{
@@ -74,7 +75,7 @@ function Deals(props) {
               <Card
                 sx={{
                   maxWidth: "220px",
-                  py: 2
+                  py: 2,
                 }}
               >
                 <CardActionArea>
@@ -131,7 +132,8 @@ function Deals(props) {
                 </CardActionArea>
                 <CardActions>
                   <BazaarButton
-                    text="Add to cart"
+                    item={item}
+                    text="Add to cart df"
                     buttonSx={{
                       bgcolor: "transparent",
                       border: "1px solid #D8E0E9",
@@ -141,7 +143,7 @@ function Deals(props) {
                       left: "50%",
                       borderRadius: 1,
                       transform: "translateX(-50%)",
-                      py: "2px"
+                      py: "2px",
                     }}
                   />
                 </CardActions>
