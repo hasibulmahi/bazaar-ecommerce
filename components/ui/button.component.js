@@ -1,3 +1,4 @@
+import { myFunction, useBearStore } from "@/stores/cart.store";
 import { Button, IconButton } from "@mui/material";
 import React from "react";
 
@@ -7,6 +8,8 @@ function BazaarButton({
   buttonVariant = "contained",
   className,
 }) {
+  console.log(myFunction());
+  // const { cartProducts, setCartProducts } = useCartStore();
   return (
     <Button
       variant={buttonVariant}
