@@ -246,9 +246,9 @@ function Navbar(props) {
 
   const [dropdownEl, setDropDownEl] = React.useState(null);
   const dropDownOpen = Boolean(dropdownEl);
-  const handleClickDropDown = (event) => {
-    setDropDownEl(event.currentTarget);
-  };
+  // const handleClickDropDown = (event) => {
+  //   setDropDownEl(event.currentTarget);
+  // };
   const handleCloseDropDown = () => {
     setDropDownEl(null);
   };
@@ -308,7 +308,12 @@ function Navbar(props) {
                       color: "#000",
                     }}
                     key={i}
-                    onClick={handleClickDropDown}
+                    // onClick={handleClickDropDown}
+                    onClick={(event) => {
+                      if (item.hasOwnProperty("children")) {
+                        setDropDownEl(event.currentTarget);
+                      }
+                    }}
                     aria-controls={dropDownOpen ? `basic-menu-${i}` : undefined}
                     aria-haspopup="true"
                     aria-expanded={dropDownOpen ? "true" : undefined}
@@ -338,13 +343,15 @@ function Navbar(props) {
               ))}
             </Box>
 
+            <NavbarRight />
+
             {/* <Search>
               <SearchIconWrapper>
                 <SearchIcon />
               </SearchIconWrapper>
               <StyledInputBase
-                placeholder="Search…"{}
-                inputProps={{ 'aria-label': 'search' }}
+                placeholder="Search…"
+                inputProps={{ "aria-label": "search" }}
               />
             </Search> */}
             <Box sx={{ flexGrow: 1 }} />
