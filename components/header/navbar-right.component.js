@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
@@ -30,6 +30,8 @@ import {
   ListItemText,
 } from "@mui/material";
 import Image from "next/image";
+import { useCartStore } from "@/stores/cart.store";
+import CartPop from "../cart-card/cart-pop.component";
 
 const navItems = [
   {
@@ -81,6 +83,7 @@ const navItems = [
 function NavbarRight(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const { cartProducts, setCartProducts, removeCartProducts } = useCartStore();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -108,6 +111,7 @@ function NavbarRight(props) {
     window !== undefined ? () => window().document.body : undefined;
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [showCarts, setShowCarts] = useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -198,44 +202,57 @@ function NavbarRight(props) {
     </Menu>
   );
 
+  const handleCartPopClose = () => {
+    setShowCarts(null);
+  };
+
   return (
-    <Box sx={{ display: { xs: "none", md: "flex" } }}>
-      <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-        <MailIcon
-          sx={{
-            color: "#aaa",
-          }}
-        />
-      </IconButton>
-      <IconButton
-        size="large"
-        edge="end"
-        aria-label="account of current user"
-        aria-controls={menuId}
-        aria-haspopup="true"
-        onClick={handleProfileMenuOpen}
-        color="inherit"
-      >
-        <AccountCircle
-          sx={{
-            color: "#aaa",
-          }}
-        />
-      </IconButton>
-      <IconButton
-        size="large"
-        aria-label="show 17 new notifications"
-        color="inherit"
-      >
-        <Badge badgeContent={17} color="error">
-          <LocalMallOutlinedIcon
+    <>
+      <CartPop
+        showCarts={showCarts}
+        anchorEl={showCarts}
+        handleCartPopClose={handleCartPopClose}
+      />
+
+      <Box sx={{ display: { xs: "none", md: "flex" } }}>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <MailIcon
             sx={{
               color: "#aaa",
             }}
           />
-        </Badge>
-      </IconButton>
-    </Box>
+        </IconButton>
+        <IconButton
+          size="large"
+          edge="end"
+          aria-label="account of current user"
+          aria-controls={menuId}
+          aria-haspopup="true"
+          onClick={handleProfileMenuOpen}
+          color="inherit"
+        >
+          <AccountCircle
+            sx={{
+              color: "#aaa",
+            }}
+          />
+        </IconButton>
+        <IconButton
+          size="large"
+          aria-label="show 17 new notifications"
+          color="inherit"
+          onClick={(event) => setShowCarts(event.currentTarget)}
+        >
+          <Badge badgeContent={cartProducts.length} color="error">
+            <LocalMallOutlinedIcon
+              sx={{
+                color: "#aaa",
+              }}
+            />
+          </Badge>
+        </IconButton>
+      </Box>
+    </>
   );
 }
 
