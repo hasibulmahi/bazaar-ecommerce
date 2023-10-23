@@ -1,3 +1,4 @@
+import EastIcon from "@mui/icons-material/East";
 export const trendingList = [
   {
     title: "NEW ARRIVALS",
@@ -12,7 +13,7 @@ export const trendingList = [
     subtitle1: "DESKTOP ",
     subtitle2: "AND LAPTOPS",
     btn: "Shop Now",
-    icon: "",
+    icon: <EastIcon />,
     image: "/header-pc.png",
   },
   {
