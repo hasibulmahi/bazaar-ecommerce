@@ -1,4 +1,5 @@
 import CartCard from "@/components/cart-card/cart-card.component";
+import CartPop from "@/components/cart-card/cart-pop.component";
 import Category from "@/components/category/category.component";
 import Deals from "@/components/deals/deals.component";
 import Feature from "@/components/feature/feature.component";
@@ -25,6 +26,7 @@ function Home(props) {
         <Offer />
         <Product />
         {/* <CartCard /> */}
+        <CartPop />
         <Footer />
       </Layout>
     </>
