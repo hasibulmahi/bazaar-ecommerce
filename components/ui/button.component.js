@@ -10,7 +10,6 @@ function BazaarButton({
   item = {},
 }) {
   const { cartProducts, setCartProducts, removeCartProducts } = useCartStore();
-  console.log("cartProducts", cartProducts);
   return (
     <>
       <Button
