@@ -1,3 +1,4 @@
+import { has, isEmpty } from "lodash";
 import { create } from "zustand";
 
 const removeOneItem = (products, item) => {
@@ -8,42 +9,36 @@ const removeOneItem = (products, item) => {
   // const filteredItem = products.filter((item)=>)
 };
 
+const cartItemObject = (p, quantity = 1) => {
+  return {
+    id: p.id,
+    title: p.title,
+    image: p.image,
+    price: p.price,
+    quantity: quantity,
+  };
+};
+
 export const addCartProducts = (products, p) => {
-  console.log("products", products.length);
-  console.log("p", p);
-  let cartProducts = [];
-  if (products.length >= 1 && products.length <= 10) {
-    products.map((item) => {
-      if (item.id === p.id) {
-        cartProducts.push({
-          id: item.id,
-          title: item.title,
-          image: item.image,
-          price: item.price,
-          quantity: item.quantity + 1,
-        });
-      } else {
-        cartProducts.push({
-          id: p.id,
-          title: p.title,
-          image: p.image,
-          price: p.price,
-          quantity: 1,
-        });
-      }
-    });
+  let cartProducts = [...products];
+  const duplicateItem = products.find((item) => item.id === p.id);
+  if (duplicateItem) {
+    cartProducts = cartProducts.filter((item) => item.id !== p.id);
+    cartProducts.push(cartItemObject(p, duplicateItem.quantity + 1));
+  } else {
+    cartProducts.push(cartItemObject(p));
   }
-  if (products.length === 0) {
-    console.log("salam");
-    cartProducts.push({
-      id: p.id,
-      title: p.title,
-      image: p.image,
-      price: p.price,
-      quantity: 1,
-    });
+  return cartProducts;
+};
+export const removeProducts = (products, p) => {
+  let cartProducts = [...products];
+  const duplicateItem = products.find((item) => item.id === p.id);
+  if (duplicateItem && duplicateItem.quantity > 1) {
+    cartProducts = cartProducts.filter((item) => item.id !== p.id);
+    cartProducts.push(cartItemObject(p, duplicateItem.quantity - 1));
+  } else {
+    cartProducts = cartProducts.filter((item) => item.id !== p.id);
   }
-  console.log("cartProducts==", cartProducts);
   return cartProducts;
 };
 
@@ -57,7 +52,7 @@ export const useCartStore = create((set) => ({
     })),
   removeCartProducts: (p) =>
     set((state) => ({
-      cartProducts: [...state.cartProducts.filter((item) => item.id !== p.id)],
+      cartProducts: [...removeProducts(state.cartProducts, p)],
     })),
   removeAllCart: () => set((state) => ({ cartProducts: [] })),
 }));
