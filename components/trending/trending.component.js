@@ -23,7 +23,7 @@ function Trending({ tendingSx }) {
               title={item.title}
               subtitle1={item.subtitle1}
               subtitle2={item.subtitle2}
-              btn={item.btn}
+              btn ={item.btn}
               cardImage={item.image}
               tendingSx={{
                 bgcolor: `${trendingBgCardColor[i]}`,
