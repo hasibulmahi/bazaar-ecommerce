@@ -1,7 +1,9 @@
 import { useCartStore } from "@/stores/cart.store";
-import { Box, Button, Link, Popover, Typography } from "@mui/material";
+import { Box, Button, Popover, Typography } from "@mui/material";
 import Divider from "@mui/material/Divider";
 import Image from "next/image";
+import Link from "next/link";
+
 import React from "react";
 
 function CartPop({ showCarts, anchorEl, handleCartPopClose, id }) {
@@ -49,7 +51,7 @@ function CartPop({ showCarts, anchorEl, handleCartPopClose, id }) {
                     ml: 1,
                   }}
                 >
-                  <Link underline="hover">
+                  <Link href="/cart" underline="hover">
                     <Typography fontSize={15} fontWeight={600}>
                       {item.title}
                     </Typography>
@@ -74,6 +76,7 @@ function CartPop({ showCarts, anchorEl, handleCartPopClose, id }) {
           )}
         </Box>
       </Box>
+      <Link href="/cart">View Cart</Link>
     </Popover>
   );
 }
