@@ -29,6 +29,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import NavbarRight from "./navbar-right.component";
+import Link from "next/link";
 
 const drawerWidth = 240;
 // const navItems = ["Home", "Services", "Portfolios", "Blog", "Contact", "..."];
@@ -278,7 +279,9 @@ function Navbar(props) {
             >
               <MenuIcon />
             </IconButton>
-            <Image src="/bazaar-logo.png" width={70} height={30} alt="Logo" />
+            <Link href={"/"}>
+              <Image src="/bazaar-logo.png" width={70} height={30} alt="Logo" />
+            </Link>
             {/* <IconButton
               color="inherit"
               aria-label="open drawer"
