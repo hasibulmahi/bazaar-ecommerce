@@ -27,7 +27,7 @@ function Home(props) {
         <Product />
         {/* <CartCard /> */}
         <CartPop />
-        <Footer />
+        
       </Layout>
     </>
   );
