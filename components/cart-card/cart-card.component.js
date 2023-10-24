@@ -142,7 +142,7 @@ function CartCard({ openCart, item, handleCloseCart }) {
                     sx={{
                       bgcolor: "#D23F57",
                       color: "#FFF",
-                      border: "1px solid red",
+                      border: "1px solid #D23F57",
                       borderRadius: "1px",
                     }}
                   />
