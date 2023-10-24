@@ -2,12 +2,14 @@ import React from "react";
 import Toolbar from "../header/toolbar.component";
 import Navbar from "../header/navbar.component";
 import { Box, Container } from "@mui/material";
+import Footer from "../footer/footer.component";
 
 function Layout({ children }) {
   return (
     <>
       <Toolbar />
       <Navbar />
+
       <Box
         sx={{
           bgcolor: "#DFDFDF",
@@ -15,6 +17,7 @@ function Layout({ children }) {
       >
         <Container>{children}</Container>
       </Box>
+      <Footer />
     </>
   );
 }
