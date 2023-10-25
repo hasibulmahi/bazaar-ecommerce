@@ -4,7 +4,7 @@ import Navbar from "../header/navbar.component";
 import { Box, Container } from "@mui/material";
 import Footer from "../footer/footer.component";
 
-function Layout({ children }) {
+function Layout({ children, layoutSx }) {
   return (
     <>
       <Toolbar />
@@ -13,6 +13,7 @@ function Layout({ children }) {
       <Box
         sx={{
           bgcolor: "#DFDFDF",
+          ...layoutSx,
         }}
       >
         <Container>{children}</Container>
