@@ -50,7 +50,11 @@ function Home(props) {
 
   return (
     <>
-      <Layout>
+      <Layout
+        layoutSx={{
+          bgcolor: "#F4F7FB",
+        }}
+      >
         <Box
           sx={{
             display: "flex",
@@ -60,51 +64,66 @@ function Home(props) {
             py: 3,
           }}
         >
-          <BazaarButton
-            onClick={false}
-            text="1. Cart"
-            buttonSx={{
+          <Button
+            sx={{
               backgroundColor: "#D23F57",
               fontSize: "14px",
+              fontWeight: "600",
               borderRadius: 10,
               boxShadow: "none",
               px: "25px",
               py: "8px",
+              color: "#FFF",
+              textTransform: "capitalize",
             }}
-          />
-          <BazaarButton
-            buttonSx={{
+          >
+            1. Cart
+          </Button>
+          <Button
+            sx={{
               backgroundColor: "#FCE9EC",
+              fontSize: "14px",
+              fontWeight: "600",
               color: "#D23F57",
               borderRadius: 10,
               boxShadow: "none",
               px: "25px",
               py: "8px",
+              textTransform: "capitalize",
             }}
-            text="2. Delivery Info"
-          />
-          <BazaarButton
-            buttonSx={{
+          >
+            2. Delivery Info
+          </Button>
+          <Button
+            sx={{
               backgroundColor: "#FCE9EC",
               color: "#D23F57",
+              fontSize: "14px",
+              fontWeight: "600",
               borderRadius: 10,
               boxShadow: "none",
               px: "25px",
               py: "8px",
+              textTransform: "capitalize",
             }}
-            text="3. Payment"
-          />
-          <BazaarButton
-            buttonSx={{
+          >
+            3. Payment
+          </Button>
+          <Button
+            sx={{
               backgroundColor: "#FCE9EC",
               color: "#D23F57",
+              fontSize: "14px",
+              fontWeight: "600",
               borderRadius: 10,
               boxShadow: "none",
               px: "25px",
               py: "8px",
+              textTransform: "capitalize",
             }}
-            text="4. Review"
-          />
+          >
+            4. Review
+          </Button>
         </Box>
         <Grid container>
           <Grid item sm={6}>
