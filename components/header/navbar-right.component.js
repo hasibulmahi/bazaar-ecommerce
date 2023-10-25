@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
@@ -32,6 +34,8 @@ import {
 import Image from "next/image";
 import { useCartStore } from "@/stores/cart.store";
 import CartPop from "../cart-card/cart-pop.component";
+import { isEmpty } from "lodash";
+import { useRouter } from "next/router";
 
 const navItems = [
   {
@@ -84,6 +88,7 @@ function NavbarRight(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const { cartProducts, setCartProducts, removeCartProducts } = useCartStore();
+  const router = useRouter();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -205,6 +210,18 @@ function NavbarRight(props) {
   const handleCartPopClose = () => {
     setShowCarts(null);
   };
+
+  const getLocalStorageCartProduct =
+    typeof window !== "undefined" &&
+    window.localStorage.getItem("cartProducts");
+
+  // console.log("getLocalStorageCartProduct==", getLocalStorageCartProduct);
+
+  useEffect(() => {
+    if (!isEmpty(getLocalStorageCartProduct)) {
+      setCartProducts(JSON.parse(getLocalStorageCartProduct));
+    }
+  }, [getLocalStorageCartProduct]);
 
   return (
     <>
