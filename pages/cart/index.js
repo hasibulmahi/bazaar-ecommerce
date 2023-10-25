@@ -18,11 +18,35 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { common } from "@mui/material/colors";
+import { isEmpty } from "lodash";
 
 function Home(props) {
-  const { cartProducts, setCartProducts, removeCartProducts } = useCartStore();
+  const {
+    cartProducts,
+    setCartProducts,
+    removeCartProducts,
+    removeSameCartProducts,
+    isCartEmpty,
+  } = useCartStore();
+  const [cartProductList, setCartProductList] = useState(null);
+  const calculateTotalPrice = (cartProductList) => {
+    if (!isEmpty(cartProductList)) {
+      return cartProductList.reduce(
+        (total, item) => total + item.price * item.quantity,
+        0
+      );
+    } else {
+      return 0;
+    }
+  };
+
+  useEffect(() => {
+    setCartProductList(cartProducts);
+  }, [cartProducts]);
+
+  console.log("cartProductList", cartProductList);
 
   return (
     <>
@@ -37,6 +61,7 @@ function Home(props) {
           }}
         >
           <BazaarButton
+            onClick={false}
             text="1. Cart"
             buttonSx={{
               backgroundColor: "#D23F57",
@@ -84,18 +109,21 @@ function Home(props) {
         <Grid container>
           <Grid item sm={6}>
             <Box>
-              {cartProducts &&
-                cartProducts.map((item, i) => (
+              {cartProductList &&
+                cartProductList.map((item, i) => (
                   <Box
                     sx={{
                       background: common.white,
                       mb: 2,
                       borderRadius: 2,
+                      py: 2,
+                      px: 1,
+                      maxWidth: "600px",
                     }}
                   >
                     <Grid container>
                       <Grid item sm={3}>
-                        <Box py={2}>
+                        <Box>
                           <Image
                             src={item?.image}
                             width={70}
@@ -105,7 +133,7 @@ function Home(props) {
                         </Box>
                       </Grid>
                       <Grid item sm={6}>
-                        <Box>
+                        <Box textAlign={"start"}>
                           <Typography fontSize={15}>{item?.title}</Typography>
                           <Typography fontSize={14} color={"#aaa"} mt={2}>
                             {item?.price} * {item?.quantity}{" "}
@@ -118,9 +146,20 @@ function Home(props) {
                             textAlign: "end",
                           }}
                         >
-                          <IconButton onClick={() => removeCartProducts(item)}>
-                            <ClearIcon />
-                          </IconButton>
+                          {isCartEmpty ? (
+                            <Typography>Your Cart is Empty</Typography>
+                          ) : (
+                            <IconButton
+                              onClick={() => removeSameCartProducts(item)}
+                            >
+                              <ClearIcon fontSize="small" />
+                            </IconButton>
+                          )}
+                          {/* <IconButton
+                            onClick={() => removeSameCartProducts(item)}
+                          >
+                            <ClearIcon fontSize="small" />
+                          </IconButton> */}
                         </Box>
                         <Box
                           sx={{
@@ -137,15 +176,17 @@ function Home(props) {
                             onClick={() => removeCartProducts(item)}
                           >
                             <RemoveIcon
-                              fontSize="medium"
+                              fontSize="small"
                               sx={{
                                 color: "#D23F57",
-                                border: "1px solid #D23F57",
-                                borderRadius: "1px",
+                                border: "2px solid #FCE9EC",
+                                borderRadius: "5px",
                               }}
                             />
                           </IconButton>
-                          <Typography>{item.quantity}</Typography>
+                          <Typography fontSize={14}>
+                            {item?.quantity}
+                          </Typography>
                           <IconButton
                             sx={{
                               ml: 2,
@@ -154,11 +195,11 @@ function Home(props) {
                             onClick={() => setCartProducts(item)}
                           >
                             <AddIcon
+                              fontSize="small"
                               sx={{
-                                bgcolor: "#D23F57",
-                                color: "#FFF",
-                                border: "1px solid #D23F57",
-                                borderRadius: "1px",
+                                color: "#D23F57",
+                                border: "2px solid #FCE9EC",
+                                borderRadius: "5px",
                               }}
                             />
                           </IconButton>
@@ -174,21 +215,38 @@ function Home(props) {
                   justifyContent: "center",
                 }}
               >
-                <BazaarButton
-                  buttonSx={{
-                    backgroundColor: "#D23F57 ",
+                <Button
+                  variant="contained"
+                  type="submit"
+                  fullWidth
+                  sx={{
+                    backgroundColor: "#D23F57",
                     borderRadius: 2,
                     boxShadow: "none",
-                    px: "150px",
-                    py: "8px",
-                    mb: 2,
+                    color: "#FFF",
+                    fontSize: "14px",
+                    textTransform: "initial",
                   }}
-                  text="Next - Delivery Address"
-                />
+                >
+                  Next - Delivery Address
+                </Button>
               </Box>
             </Box>
           </Grid>
-          <Grid item sm={4}></Grid>
+          <Grid item sm={6}>
+            <Box
+              sx={{
+                background: common.white,
+                borderRadius: 2,
+              }}
+            >
+              <Box>
+                <Typography fontSize={14}>
+                  Subtotal: {calculateTotalPrice(cartProductList).toFixed(2)}
+                </Typography>
+              </Box>
+            </Box>
+          </Grid>
         </Grid>
       </Layout>
     </>
