@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
@@ -28,8 +30,12 @@ import {
   ListItemText,
 } from "@mui/material";
 import Image from "next/image";
-import NavbarRight from "./navbar-right.component";
+// import NavbarRight from "./navbar-right.component";
+const NavbarRight = dynamic(() => import("./navbar-right.component"), {
+  ssr: false,
+});
 import Link from "next/link";
+import dynamic from "next/dynamic";
 
 const drawerWidth = 240;
 // const navItems = ["Home", "Services", "Portfolios", "Blog", "Contact", "..."];
@@ -253,6 +259,12 @@ function Navbar(props) {
   const handleCloseDropDown = () => {
     setDropDownEl(null);
   };
+
+  React.useEffect(() => {
+    const getLocalStorageCartProduct =
+      typeof window !== "undefined" &&
+      window.localStorage.getItem("cartProducts");
+  }, []);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
