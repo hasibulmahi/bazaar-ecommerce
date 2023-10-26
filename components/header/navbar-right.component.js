@@ -229,7 +229,7 @@ function NavbarRight(props) {
         handleCartPopClose={handleCartPopClose}
       />
 
-      <Box sx={{ display: { xs: "none", md: "flex" } }}>
+      <Box sx={{ display: { xs: "none", md: "flex" }, ml: "auto" }}>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <MailIcon
             sx={{
