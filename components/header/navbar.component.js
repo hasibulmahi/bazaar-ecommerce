@@ -279,6 +279,7 @@ function Navbar(props) {
           <Toolbar
             sx={{
               px: "0 !important",
+              display: "flex",
             }}
           >
             <IconButton
@@ -369,9 +370,9 @@ function Navbar(props) {
                 inputProps={{ "aria-label": "search" }}
               />
             </Search> */}
-            <Box sx={{ flexGrow: 1 }} />
+            {/* <Box sx={{ flexGrow: 1 }} /> */}
 
-            <Box sx={{ display: { xs: "flex", md: "none" } }}>
+            {/* <Box sx={{ display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
                 aria-label="show more"
@@ -382,7 +383,7 @@ function Navbar(props) {
               >
                 <MoreIcon />
               </IconButton>
-            </Box>
+            </Box> */}
           </Toolbar>
         </Container>
       </AppBar>
