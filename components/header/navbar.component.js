@@ -253,15 +253,7 @@ function Navbar(props) {
             <Link href={"/"}>
               <Image src="/bazaar-logo.png" width={70} height={30} alt="Logo" />
             </Link>
-            {/* <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{ mr: 2, display: { sm: "none" } }}
-            >
-              <MenuIcon />
-            </IconButton> */}
+     
             <Box
               sx={{
                 display: {
