@@ -359,8 +359,6 @@ function Navbar(props) {
             </Box>
 
             <NavbarRight />
-
-          
           </Toolbar>
         </Container>
       </AppBar>
