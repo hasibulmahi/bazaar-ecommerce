@@ -30,7 +30,6 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 
 const drawerWidth = 240;
-// const navItems = ["Home", "Services", "Portfolios", "Blog", "Contact", "..."];
 const navItems = [
   {
     text: "Home",
