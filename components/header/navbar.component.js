@@ -22,7 +22,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import Image from "next/image";
-// import NavbarRight from "./navbar-right.component";
+
 const NavbarRight = dynamic(() => import("./navbar-right.component"), {
   ssr: false,
 });
