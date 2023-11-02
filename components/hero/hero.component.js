@@ -1,10 +1,4 @@
-import {
-  Box,
-  Button,
-  Grid,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
 import React from "react";
 import Slider from "react-slick";
 
@@ -30,6 +24,7 @@ function Hero(props) {
     pauseOnHover: true,
     autoplay: true,
     autoplaySpeed: 2500,
+
     appendDots: (dots) => (
       <div
         style={{
@@ -55,6 +50,33 @@ function Hero(props) {
         </Button>
       </Box>
     ),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
   return (
     <Grid container spacing={2}>
@@ -150,7 +172,14 @@ function Hero(props) {
                   bottom: 0,
                 }}
               >
-                <Image src={item.image} width={100} height={100} alt="img" />
+                <Image
+                  src={item.image}
+
+                  width={100}
+                  height={100}
+                  alt="img"
+                
+                />
               </Box>
             </Box>
           ))}
