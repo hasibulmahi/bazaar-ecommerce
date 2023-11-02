@@ -8,7 +8,6 @@ import {
   Grid,
   ListItem,
   ListItemButton,
-  ListItemText,
   Typography,
 } from "@mui/material";
 import Rating from "@mui/material/Rating";
