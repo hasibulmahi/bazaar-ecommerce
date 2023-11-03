@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import { categoryList } from "./category-seeds";
 import CategoryItem from "./category-item";
@@ -13,7 +13,6 @@ function Category(props) {
               categoryImage={item.image}
               categorySlug={item.slug}
               categoryTitle={item.title}
-              
             />
           </Grid>
         ))}
