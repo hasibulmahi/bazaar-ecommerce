@@ -1,8 +1,6 @@
 import { Box, Button, Container, Grid } from "@mui/material";
 import React from "react";
 import { categoryList } from "./category-seeds";
-import Link from "next/link";
-
 
 import CategoryItem from "./category-item";
 
