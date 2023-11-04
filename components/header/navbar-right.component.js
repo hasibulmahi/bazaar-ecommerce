@@ -88,14 +88,10 @@ function NavbarRight(props) {
   const { cartProducts, setCartProducts, removeCartProducts } = useCartStore();
   const router = useRouter();
 
-
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
-
   const [showCarts, setShowCarts] = useState(null);
-
-
 
   const handleCartPopClose = () => {
     setShowCarts(null);
@@ -130,13 +126,13 @@ function NavbarRight(props) {
           />
         </IconButton>
         <IconButton
-          // size="large"
-          // edge="end"
-          // aria-label="account of current user"
-          // aria-controls={menuId}
-          // aria-haspopup="true"
-          // onClick={handleProfileMenuOpen}
-          // color="inherit"
+        // size="large"
+        // edge="end"
+        // aria-label="account of current user"
+        // aria-controls={menuId}
+        // aria-haspopup="true"
+        // onClick={handleProfileMenuOpen}
+        // color="inherit"
         >
           <AccountCircle
             sx={{
