@@ -11,7 +11,6 @@ import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
-
 import { useCartStore } from "@/stores/cart.store";
 import CartPop from "../cart-card/cart-pop.component";
 import { isEmpty } from "lodash";
