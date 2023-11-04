@@ -105,7 +105,6 @@ function Navbar(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
-
   const [dropdownEl, setDropDownEl] = React.useState(null);
   const dropDownOpen = Boolean(dropdownEl);
 
