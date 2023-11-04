@@ -88,8 +88,7 @@ function NavbarRight(props) {
   const { cartProducts, setCartProducts, removeCartProducts } = useCartStore();
   const router = useRouter();
 
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
+
 
   const [showCarts, setShowCarts] = useState(null);
 
