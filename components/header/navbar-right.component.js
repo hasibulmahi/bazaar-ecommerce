@@ -92,7 +92,7 @@ function NavbarRight(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
   // const [anchorEl, setAnchorEl] = React.useState(null);
-  // const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
   const [showCarts, setShowCarts] = useState(null);
 
 
