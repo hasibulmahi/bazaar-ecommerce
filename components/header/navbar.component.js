@@ -142,7 +142,9 @@ function Navbar(props) {
               onClick={handleDrawerToggle}
               sx={{ mr: 2, display: { sm: "none" } }}
             >
-              <MenuIcon />
+              <MenuIcon sx={{
+                color: "#000"
+              }} />
             </IconButton>
             <Link href={"/"}>
               <Image src="/bazaar-logo.png" width={70} height={30} alt="Logo" />
