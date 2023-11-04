@@ -11,52 +11,52 @@ import CartPop from "../cart-card/cart-pop.component";
 import { isEmpty } from "lodash";
 import { useRouter } from "next/router";
 
-const navItems = [
-  {
-    text: "Home",
-    permalink: "home",
-    children: [
-      {
-        text: "Home-1",
-        permalink: "home-1",
-      },
-      {
-        text: "Home-1",
-        permalink: "home-1",
-      },
-    ],
-  },
-  {
-    text: "Mega Menu",
-    permalink: "mega-menu",
-    children: [
-      {
-        text: "Home-1",
-        permalink: "home-1",
-      },
-      {
-        text: "Home-1",
-        permalink: "home-1",
-      },
-    ],
-  },
-  {
-    text: "Full Screen Menu",
-    permalink: "full-screen-menu",
-  },
-  {
-    text: "Pages",
-    permalink: "pages",
-  },
-  {
-    text: "User Account",
-    permalink: "user-account",
-  },
-  {
-    text: "Vendor Account",
-    permalink: "vendor-account",
-  },
-];
+// const navItems = [
+//   {
+//     text: "Home",
+//     permalink: "home",
+//     children: [
+//       {
+//         text: "Home-1",
+//         permalink: "home-1",
+//       },
+//       {
+//         text: "Home-1",
+//         permalink: "home-1",
+//       },
+//     ],
+//   },
+//   {
+//     text: "Mega Menu",
+//     permalink: "mega-menu",
+//     children: [
+//       {
+//         text: "Home-1",
+//         permalink: "home-1",
+//       },
+//       {
+//         text: "Home-1",
+//         permalink: "home-1",
+//       },
+//     ],
+//   },
+//   {
+//     text: "Full Screen Menu",
+//     permalink: "full-screen-menu",
+//   },
+//   {
+//     text: "Pages",
+//     permalink: "pages",
+//   },
+//   {
+//     text: "User Account",
+//     permalink: "user-account",
+//   },
+//   {
+//     text: "Vendor Account",
+//     permalink: "vendor-account",
+//   },
+// ];
 
 function NavbarRight(props) {
   const { window } = props;
