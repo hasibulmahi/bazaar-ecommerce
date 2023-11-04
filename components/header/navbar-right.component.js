@@ -13,7 +13,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 
 
-import Image from "next/image";
+
 import { useCartStore } from "@/stores/cart.store";
 import CartPop from "../cart-card/cart-pop.component";
 import { isEmpty } from "lodash";
