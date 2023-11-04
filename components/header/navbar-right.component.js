@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 
 import Badge from "@mui/material/Badge";
-
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
