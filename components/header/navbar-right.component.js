@@ -84,7 +84,7 @@ const navItems = [
 
 function NavbarRight(props) {
   const { window } = props;
-  // const [mobileOpen, setMobileOpen] = React.useState(false);
+
   const { cartProducts, setCartProducts, removeCartProducts } = useCartStore();
   const router = useRouter();
 
