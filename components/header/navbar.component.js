@@ -104,8 +104,7 @@ function Navbar(props) {
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
 
   const [dropdownEl, setDropDownEl] = React.useState(null);
   const dropDownOpen = Boolean(dropdownEl);
