@@ -88,27 +88,6 @@ function NavbarRight(props) {
   const { cartProducts, setCartProducts, removeCartProducts } = useCartStore();
   const router = useRouter();
 
-  // const handleDrawerToggle = () => {
-  //   setMobileOpen((prevState) => !prevState);
-  // };
-
-  // const drawer = (
-  //   <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-  //     <Typography variant="h6" sx={{ my: 2 }}>
-  //       Bazaar
-  //     </Typography>
-  //     <Divider />
-  //     <List>
-  //       {navItems.map((item, i) => (
-  //         <ListItem key={i} disablePadding>
-  //           <ListItemButton sx={{ textAlign: "center" }} id={item.permalink}>
-  //             <ListItemText primary={item.text} />
-  //           </ListItemButton>
-  //         </ListItem>
-  //       ))}
-  //     </List>
-  //   </Box>
-  // );
 
   const container =
     window !== undefined ? () => window().document.body : undefined;
