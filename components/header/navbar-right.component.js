@@ -125,9 +125,7 @@ function NavbarRight(props) {
             }}
           />
         </IconButton>
-        <IconButton
-        
-        >
+        <IconButton>
           <AccountCircle
             sx={{
               color: "#aaa",
