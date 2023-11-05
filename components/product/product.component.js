@@ -15,7 +15,6 @@ import Image from "next/image";
 import BazaarButton from "../ui/button.component";
 import { productList } from "./product.seeds";
 import { categoryList } from "../category/category-seeds";
-import Link from "next/link";
 import CartCard from "../cart-card/cart-card.component";
 
 function Product(props) {
