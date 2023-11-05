@@ -61,18 +61,58 @@ const navItems = [
   {
     text: "Full Screen Menu",
     permalink: "full-screen-menu",
+    children: [
+      {
+        text: "Home-1",
+        permalink: "home-1",
+      },
+      {
+        text: "Home-1",
+        permalink: "home-1",
+      },
+    ],
   },
   {
     text: "Pages",
     permalink: "pages",
+    children: [
+      {
+        text: "Home-1",
+        permalink: "home-1",
+      },
+      {
+        text: "Home-1",
+        permalink: "home-1",
+      },
+    ],
   },
   {
     text: "User Account",
     permalink: "user-account",
+    children: [
+      {
+        text: "Home-1",
+        permalink: "home-1",
+      },
+      {
+        text: "Home-1",
+        permalink: "home-1",
+      },
+    ],
   },
   {
     text: "Vendor Account",
     permalink: "vendor-account",
+    children: [
+      {
+        text: "Home-1",
+        permalink: "home-1",
+      },
+      {
+        text: "Home-1",
+        permalink: "home-1",
+      },
+    ],
   },
 ];
 
@@ -172,7 +212,6 @@ function Navbar(props) {
                       color: "#000",
                     }}
                     key={i}
-                    // onClick={handleClickDropDown}
                     onClick={(event) => {
                       if (item.hasOwnProperty("children")) {
                         setDropDownEl(event.currentTarget);
