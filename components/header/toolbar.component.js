@@ -38,12 +38,15 @@ function Toolbar(props) {
                 color: "#FFF",
                 marginRight: 1,
                 px: 1,
+                fontWeight: "600",
               }}
               label="HOT"
               size="small"
               color="error"
             />
-            <Typography color="#FFF">Free Express Shipping</Typography>
+            <Typography fontSize={13} color="#FFF">
+              Free Express Shipping
+            </Typography>
           </Box>
           <FormControl
             size="small"
