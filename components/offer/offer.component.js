@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import BazaarButton from "../ui/button.component";
-import { red } from "@mui/material/colors";
+
 
 function Offer(props) {
   return (
