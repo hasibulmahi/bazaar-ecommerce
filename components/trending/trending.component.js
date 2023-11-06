@@ -1,7 +1,7 @@
 import React from "react";
 import { trendingList } from "./trending-seeds";
 import Image from "next/image";
-import { Box, Grid, } from "@mui/material";
+import { Grid } from "@mui/material";
 import TrendingCard from "./tending-card";
 
 const trendingBgCardColor = ["#F4F7FB", "#2B3445", "#EDEBEC"];
@@ -23,7 +23,7 @@ function Trending({ tendingSx }) {
               title={item.title}
               subtitle1={item.subtitle1}
               subtitle2={item.subtitle2}
-              btn ={item.btn}
+              btn={item.btn}
               cardImage={item.image}
               tendingSx={{
                 bgcolor: `${trendingBgCardColor[i]}`,
