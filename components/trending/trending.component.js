@@ -1,7 +1,7 @@
 import React from "react";
 import { trendingList } from "./trending-seeds";
 import Image from "next/image";
-import { Box, Grid, IconButton } from "@mui/material";
+import { Box, Grid, } from "@mui/material";
 import TrendingCard from "./tending-card";
 
 const trendingBgCardColor = ["#F4F7FB", "#2B3445", "#EDEBEC"];
