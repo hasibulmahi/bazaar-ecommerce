@@ -16,6 +16,7 @@ import Image from "next/image";
 import BazaarButton from "../ui/button.component";
 import EastIcon from "@mui/icons-material/East";
 import CartCard from "../cart-card/cart-card.component";
+import MoreProductsBar from "./more-products-bar";
 
 function Deals(props) {
   const [value, setValue] = useState(2);
@@ -37,48 +38,7 @@ function Deals(props) {
           color: "#2B3445",
         }}
       >
-        <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginBottom: 1,
-          }}
-        >
-          <Typography
-            sx={{
-              color: "#2B3445",
-            }}
-            fontSize={15}
-            fontWeight={600}
-          >
-            Deals of the day
-          </Typography>
-          <Box
-            sx={{
-              marginLeft: "auto",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <Typography
-              sx={{
-                fontSize: "14px",
-              }}
-            >
-              More Products
-            </Typography>
-            <IconButton>
-              <EastIcon
-                sx={{
-                  color: "#2B3445",
-                }}
-                fontSize="small"
-              />
-            </IconButton>
-          </Box>
-        </Box>
+        <MoreProductsBar />
         <Grid container spacing={2}>
           {dealList &&
             dealList.map((item, i) => (
@@ -86,7 +46,6 @@ function Deals(props) {
                 <Card
                   sx={{
                     maxWidth: "220px",
-               
                   }}
                 >
                   <CardActionArea>
