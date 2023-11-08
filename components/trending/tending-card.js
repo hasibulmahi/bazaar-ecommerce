@@ -19,6 +19,10 @@ function TrendingCard({
 }) {
   const theme = useTheme();
   const mdOrDown = useMediaQuery(theme.breakpoints.down("md"));
+  const smOrUp = useMediaQuery(theme.breakpoints.up("sm"));
+  // const xsOrDown = useMediaQuery(theme.breakpoints.down("xs"));
+
+  // console.log("mdOrDown=", mdOrDown, "smOrUp=", smOrUp);
 
   return (
     <Box
@@ -101,8 +105,8 @@ function TrendingCard({
       >
         <Image
           src={cardImage}
-          width={mdOrDown ? 200 : 100}
-          height={mdOrDown ? 200 : 100}
+          width={mdOrDown && smOrUp ? 500 : 100}
+          height={mdOrDown && smOrUp ? 500 : 100}
           alt="img"
         />
       </Box>
