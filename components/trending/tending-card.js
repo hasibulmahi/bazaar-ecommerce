@@ -1,4 +1,10 @@
-import { Box, IconButton, Typography } from "@mui/material";
+import {
+  Box,
+  IconButton,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import EastIcon from "@mui/icons-material/East";
@@ -11,11 +17,22 @@ function TrendingCard({
   cardImage,
   tendingSx,
 }) {
+  const theme = useTheme();
+  const mdOrDown = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
         minHeight: "155px",
-        minWidth: "350px",
+        py: {
+          xs: 4,
+          md: 2,
+          lg: 0,
+        },
+        minWidth: {
+          lg: "350px",
+          xs: "100%",
+        },
         bgcolor: "#F3EFEC",
         padding: "0px",
         position: "relative",
@@ -23,7 +40,10 @@ function TrendingCard({
         display: "flex",
         alignItems: "center",
         justifyContent: "start",
-        mt: 5,
+        mt: {
+          xs: 1.5,
+          lg: 5,
+        },
         // bgcolor: `${trendingCardColor[i]}`,
         ...tendingSx,
       }}
@@ -79,7 +99,12 @@ function TrendingCard({
           bottom: 0,
         }}
       >
-        <Image src={cardImage} width={100} height={100} alt="img" />
+        <Image
+          src={cardImage}
+          width={mdOrDown ? 200 : 100}
+          height={mdOrDown ? 200 : 100}
+          alt="img"
+        />
       </Box>
     </Box>
   );
