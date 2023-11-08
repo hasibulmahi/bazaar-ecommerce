@@ -18,7 +18,7 @@ function Trending({ tendingSx }) {
     >
       {trendingList &&
         trendingList.map((item, i) => (
-          <Grid item sm={4} key={i}>
+          <Grid item md={4} xs={12} key={i}>
             <TrendingCard
               title={item.title}
               subtitle1={item.subtitle1}
