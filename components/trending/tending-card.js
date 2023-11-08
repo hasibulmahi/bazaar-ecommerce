@@ -105,8 +105,8 @@ function TrendingCard({
       >
         <Image
           src={cardImage}
-          width={mdOrDown && smOrUp ? 500 : 100}
-          height={mdOrDown && smOrUp ? 500 : 100}
+          width={mdOrDown && smOrUp ? 200 : 100}
+          height={mdOrDown && smOrUp ? 200 : 100}
           alt="img"
         />
       </Box>
