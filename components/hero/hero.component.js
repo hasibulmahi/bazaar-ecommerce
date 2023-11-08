@@ -22,7 +22,7 @@ function Hero(props) {
     className: "bazaar-hero-slider",
     arrows: false,
     pauseOnHover: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2500,
 
     appendDots: (dots) => (
@@ -81,7 +81,7 @@ function Hero(props) {
   return (
     <Grid container spacing={2}>
       {/* Grid item start */}
-      <Grid item sm={9}>
+      <Grid item xs={12} md={9}>
         <Slider {...settings}>
           {heroContent.map((item, i) => (
             <Box
@@ -98,7 +98,7 @@ function Hero(props) {
       </Grid>
       {/* Grid item end */}
       {/* Grid item start */}
-      <Grid item sm={3}>
+      <Grid item md={3} xs={12}>
         {heroChild &&
           heroChild.map((item, i) => (
             <Box

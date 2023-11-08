@@ -38,12 +38,12 @@ function Footer(props) {
       sx={{
         bgcolor: "#2B3445",
         color: "#FFF",
-        px: 10,
+        px: 20,
         py: 8,
       }}
     >
       <Grid container spacing={5}>
-        <Grid item sm={4}>
+        <Grid item xs={12} sm={8} md={4}>
           <Box>
             <Image
               src="/bazaar-logo.png"
@@ -56,7 +56,7 @@ function Footer(props) {
                 mb: 2,
               }}
               variant="body2"
-              fontSize={13}
+              fontSize={14}
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor
               libero id et, in gravida. Sit diam duis mauris nulla cursus. Erat
@@ -75,16 +75,18 @@ function Footer(props) {
                 height={50}
                 alt="Play Store"
               />
-              <Image
-                src="/app-store.png"
-                width={150}
-                height={50}
-                alt="App Store"
-              />
+              <Box ml={1}>
+                <Image
+                  src="/app-store.png"
+                  width={150}
+                  height={50}
+                  alt="App Store"
+                />
+              </Box>
             </Box>
           </Box>
         </Grid>
-        <Grid item sm={2.6}>
+        <Grid item xs={12} sm={4} md={2.6}>
           <Box>
             <Typography mb={2} variant="h5" fontWeight={600}>
               About Us
@@ -114,7 +116,7 @@ function Footer(props) {
             </Box>
           </Box>
         </Grid>
-        <Grid item sm={2.6}>
+        <Grid item xs={12} sm={6} md={2.6}>
           <Box>
             <Typography mb={2} variant="h5" fontWeight={600}>
               Customer Care
@@ -144,7 +146,7 @@ function Footer(props) {
             </Box>
           </Box>
         </Grid>
-        <Grid item sm={2.6}>
+        <Grid item xs={12} sm={6} md={2.6}>
           <Box>
             <Typography mb={2} variant="h5" fontWeight={600}>
               Contact Us

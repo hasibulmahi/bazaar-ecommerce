@@ -1,12 +1,6 @@
 import React from "react";
 import { featureItem } from "./feature-item";
-import {
-  Box,
-  Container,
-  Grid,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Grid, IconButton, Typography } from "@mui/material";
 
 function Feature(props) {
   return (

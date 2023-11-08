@@ -7,8 +7,8 @@ import Footer from "../footer/footer.component";
 function Layout({ children, layoutSx }) {
   return (
     <>
-      <Toolbar />
-      <Navbar />
+      {/* <Toolbar />
+      <Navbar /> */}
 
       <Box
         sx={{
@@ -18,7 +18,7 @@ function Layout({ children, layoutSx }) {
       >
         <Container>{children}</Container>
       </Box>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

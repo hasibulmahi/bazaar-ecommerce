@@ -18,7 +18,9 @@ function SingleSlide({ item }) {
             paddingTop: "110px",
           }}
           item
-          sm={6}
+          md={7}
+          lg={6}
+          xs={12}
         >
           <Typography
             sx={{
@@ -78,8 +80,15 @@ function SingleSlide({ item }) {
       <Box
         sx={{
           position: "absolute",
-          right: "120px",
+          right: {
+            lg: "120px",
+            md: "70px",
+          },
           top: "30px",
+          display: {
+            xs: "none",
+            md: "block",
+          },
         }}
       >
         <Image
