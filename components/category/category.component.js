@@ -8,7 +8,7 @@ function Category(props) {
     <Grid container spacing={2}>
       {categoryList &&
         categoryList.map((item, i) => (
-          <Grid item sm={2} key={i}>
+          <Grid item xs={12} sm={6} md={4} lg={2} key={i}>
             <CategoryItem
               categoryImage={item.image}
               categorySlug={item.slug}
