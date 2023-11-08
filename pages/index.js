@@ -17,14 +17,14 @@ function Home(props) {
       <Layout>
         <Hero />
         <Feature />
-        {/* <Category />
+        <Category />
         <Deals />
         <Trending />
         <Product />
         <Trending />
         <Product />
         <Offer />
-        <Product /> */}
+        <Product />
         {/* <CartCard /> */}
         <CartPop />
       </Layout>
