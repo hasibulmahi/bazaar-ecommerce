@@ -66,7 +66,7 @@ function Footer(props) {
               sx={{
                 display: "flex",
                 alignItems: "flex-start",
-                justifyContent: "space-between",
+                
               }}
             >
               <Image
