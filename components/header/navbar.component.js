@@ -131,8 +131,8 @@ function Navbar(props) {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item, i) => (
-          <ListItem key={i} disablePadding>
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }} id={item.permalink}>
               <ListItemText primary={item.text} />
             </ListItemButton>
