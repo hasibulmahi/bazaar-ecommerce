@@ -13,26 +13,26 @@ function Footer(props) {
 
   console.log("cartProducts", cartProducts);
 
-  const product1 = {
-    id: "23436fdg8ukyf5658ju",
-    image: "/t-shirt.jpg",
-    title: "Premium T-Shirt",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
-    price: "350",
-    totalRating: 4,
-    category: ["9234239jfdfg9893"],
-  };
-  const product2 = {
-    id: "23436fdgdf5uim85g",
-    image: "/t-shirt.jpg",
-    title: "Premium T-Shirt",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
-    price: "350",
-    totalRating: 4.2,
-    category: ["9234239ofdfg9893"],
-  };
+  // const product1 = {
+  //   id: "23436fdg8ukyf5658ju",
+  //   image: "/t-shirt.jpg",
+  //   title: "Premium T-Shirt",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
+  //   price: "350",
+  //   totalRating: 4,
+  //   category: ["9234239jfdfg9893"],
+  // };
+  // const product2 = {
+  //   id: "23436fdgdf5uim85g",
+  //   image: "/t-shirt.jpg",
+  //   title: "Premium T-Shirt",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
+  //   price: "350",
+  //   totalRating: 4.2,
+  //   category: ["9234239ofdfg9893"],
+  // };
   return (
     <Box
       sx={{
@@ -66,7 +66,10 @@ function Footer(props) {
               sx={{
                 display: "flex",
                 alignItems: "flex-start",
-                
+                flexFlow: {
+                  lg: "row",
+                  xs: "column"
+                }
               }}
             >
               <Image
@@ -75,7 +78,15 @@ function Footer(props) {
                 height={50}
                 alt="Play Store"
               />
-              <Box ml={1}>
+              <Box sx={{
+                ml: {
+                  lg: 1
+                },
+                mt: {
+                  xs: 1,
+                  lg: 0
+                }
+              }}>
                 <Image
                   src="/app-store.png"
                   width={150}
@@ -103,7 +114,7 @@ function Footer(props) {
                   return (
                     <Link
                       underline="none"
-                      variant="text"
+                      variant="body-2"
                       href={`/${item.href}`}
                       color={"#C1CDD7"}
                       fontSize={14}
@@ -206,10 +217,10 @@ function Footer(props) {
           </Box>
         </Grid>
       </Grid>
-      <Button onClick={() => setCartProducts(product1)}>add item1</Button>
+      {/* <Button onClick={() => setCartProducts(product1)}>add item1</Button>
       <Button onClick={() => setCartProducts(product2)}>add item2</Button>
       <Button onClick={() => removeCartProducts(product1)}>remove item1</Button>
-      <Button onClick={() => removeCartProducts(product2)}>remove item2</Button>
+      <Button onClick={() => removeCartProducts(product2)}>remove item2</Button> */}
     </Box>
   );
 }
