@@ -23,35 +23,35 @@ const settings = {
   dots: true,
   infinite: true,
   speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 3,
+  slidesToShow: 5,
+  slidesToScroll: 5,
 
-  // responsive: [
-  //   {
-  //     breakpoint: 1024,
-  //     settings: {
-  //       slidesToShow: 3,
-  //       slidesToScroll: 3,
-  //       infinite: true,
-  //       dots: true,
-  //     },
-  //   },
-  //   {
-  //     breakpoint: 600,
-  //     settings: {
-  //       slidesToShow: 2,
-  //       slidesToScroll: 2,
-  //       initialSlide: 2,
-  //     },
-  //   },
-  //   {
-  //     breakpoint: 480,
-  //     settings: {
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //     },
-  //   },
-  // ],
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
 function Deals(props) {
@@ -77,89 +77,94 @@ function Deals(props) {
         }}
       >
         <MoreProductsBar />
-        <Box>
+        <Box
+          sx={{
+            ml: -2,
+            mr: -2,
+          }}
+        >
           <Slider {...settings}>
             {dealList &&
               dealList.map((item, i) => (
-                <Box sx={{ px: 4 }} key={i}>
-                  <Card
-                    sx={
-                      {
-                        // maxWidth: "220px",
-                      }
-                    }
+                <Box key={i}>
+                  <Box
+                    sx={{
+                      px: 2,
+                    }}
                   >
-                    <CardActionArea>
-                      <CardContent
-                        onClick={() => setOpenCart(item)}
-                        sx={{
-                          textAlign: "center",
-                        }}
-                      >
-                        <Box
+                    <Card>
+                      <CardActionArea>
+                        <CardContent
+                          onClick={() => setOpenCart(item)}
                           sx={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
+                            textAlign: "center",
                           }}
                         >
-                          <Image
-                            src={item.image}
-                            height={140}
-                            width={120}
-                            alt="img"
-                          />
-                        </Box>
-                        <Typography fontSize={14}>{item.title}</Typography>
-                        <Typography fontSize={14} fontWeight="600">
-                          ${item.price}
-                        </Typography>
-                        <Box
-                          sx={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          <Rating
-                            name="simple-controlled"
-                            size="small"
-                            value={value}
-                            onChange={(event, newValue) => {
-                              setValue(newValue);
-                            }}
-                            sx={{}}
-                          />
-                          <Typography
+                          <Box
                             sx={{
-                              paddingLeft: 1,
-                              fontSize: "14px",
-                              color: "#7D879C",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
                             }}
                           >
-                            {item.totalRating}
+                            <Image
+                              src={item.image}
+                              height={140}
+                              width={120}
+                              alt="img"
+                            />
+                          </Box>
+                          <Typography fontSize={14}>{item.title}</Typography>
+                          <Typography fontSize={14} fontWeight="600">
+                            ${item.price}
                           </Typography>
-                        </Box>
-                      </CardContent>
-                    </CardActionArea>
-                    <CardActions>
-                      <BazaarButton
-                        item={item}
-                        text="Add to cart df"
-                        buttonSx={{
-                          bgcolor: "transparent",
-                          border: "1px solid #D8E0E9",
-                          boxShadow: "none",
-                          color: "#4B566B",
-                          position: "relative",
-                          left: "50%",
-                          borderRadius: 1,
-                          transform: "translateX(-50%)",
-                          py: "2px",
-                        }}
-                      />
-                    </CardActions>
-                  </Card>
+                          <Box
+                            sx={{
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <Rating
+                              name="simple-controlled"
+                              size="small"
+                              value={value}
+                              onChange={(event, newValue) => {
+                                setValue(newValue);
+                              }}
+                              sx={{}}
+                            />
+                            <Typography
+                              sx={{
+                                paddingLeft: 1,
+                                fontSize: "14px",
+                                color: "#7D879C",
+                              }}
+                            >
+                              {item.totalRating}
+                            </Typography>
+                          </Box>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <BazaarButton
+                          item={item}
+                          text="Add to cart"
+                          buttonSx={{
+                            bgcolor: "transparent",
+                            border: "1px solid #D8E0E9",
+                            boxShadow: "none",
+                            color: "#4B566B",
+                            position: "relative",
+                            left: "50%",
+                            borderRadius: 1,
+                            transform: "translateX(-50%)",
+                            py: "2px",
+                          }}
+                        />
+                      </CardActions>
+                    </Card>
+                  </Box>
                 </Box>
               ))}
           </Slider>
