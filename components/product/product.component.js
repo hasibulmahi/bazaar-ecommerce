@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import Rating from "@mui/material/Rating";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import BazaarButton from "../ui/button.component";
 import { productList } from "./product.seeds";
@@ -18,7 +18,49 @@ import { categoryList } from "../category/category-seeds";
 import CartCard from "../cart-card/cart-card.component";
 import Slider from "react-slick";
 
+// const settings = {
+//   dots: true,
+//   infinite: true,
+//   speed: 500,
+//   slidesToShow: 2,
+//   slidesToScroll: 2,
+
+//   // responsive: [
+//   //   {
+//   //     breakpoint: 1024,
+//   //     settings: {
+//   //       slidesToShow: 3,
+//   //       slidesToScroll: 3,
+//   //       infinite: true,
+//   //       dots: true,
+//   //     },
+//   //   },
+//   //   {
+//   //     breakpoint: 600,
+//   //     settings: {
+//   //       slidesToShow: 2,
+//   //       slidesToScroll: 2,
+//   //       initialSlide: 2,
+//   //     },
+//   //   },
+//   //   {
+//   //     breakpoint: 480,
+//   //     settings: {
+//   //       slidesToShow: 1,
+//   //       slidesToScroll: 1,
+//   //     },
+//   //   },
+//   // ],
+// };
+
 function Product(props) {
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    setHeight(ref.current.clientHeight);
+  }, []);
+
   const [value, setValue] = useState(2);
   const [activeCategory, setActiveCategory] = useState("92342398fdfg9893");
   const [categoryProducts, setCategoryProducts] = useState(null);
@@ -27,37 +69,47 @@ function Product(props) {
 
   const settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
+    slidesToShow:
+      categoryProducts?.length >= 4
+        ? 4
+        : categoryProducts?.length > 1 && categoryProducts?.length < 4
+        ? categoryProducts?.length
+        : 4,
+    slidesToScroll:
+      categoryProducts?.length >= 4
+        ? 4
+        : categoryProducts?.length > 1 && categoryProducts?.length < 4
+        ? categoryProducts?.length
+        : 4,
+
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 3,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 600,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 2,
+    //       initialSlide: 2,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    // ],
   };
   useEffect(() => {
     let products = [];
@@ -80,7 +132,7 @@ function Product(props) {
     setOpenCart(null);
   };
 
-  console.log(categoryProducts);
+  console.log("categoryProducts", categoryProducts);
 
   return (
     <>
@@ -93,6 +145,7 @@ function Product(props) {
         <Grid container spacing={2}>
           <Grid item sm={2.4}>
             <Box
+              ref={ref}
               sx={{
                 bgcolor: "#FFF",
                 borderRadius: 1,
@@ -133,22 +186,20 @@ function Product(props) {
           </Grid>
 
           <Grid item sm={9.6}>
-            <Grid
-              container
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            <Box
               sx={{
                 height: "100%",
               }}
             >
-              
+              <Slider {...settings}>
                 {categoryProducts &&
-                  [...categoryProducts].splice(0, 4).map((item, i) => (
-                    <Grid item sm={3}>
+                  [...categoryProducts].map((item, i) => (
+                    <Box key={i}>
                       <Card
                         key={i}
                         sx={{
                           maxWidth: "220px",
-                          height: "100%",
+                          height: `${height ? height : "300"}px`,
                         }}
                       >
                         <CardActionArea>
@@ -224,10 +275,10 @@ function Product(props) {
                           />
                         </CardActions>
                       </Card>
-                    </Grid>
+                    </Box>
                   ))}
-              
-            </Grid>
+              </Slider>
+            </Box>
           </Grid>
           <Grid item sm={12}>
             <Box>
