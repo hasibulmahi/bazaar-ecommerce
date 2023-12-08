@@ -360,8 +360,8 @@ function Home(props) {
                     <FormControl fullWidth>
                       <Select onChange={handleCountryChange} value={country}>
                         <MenuItem value={10}>United State</MenuItem>
-                        <MenuItem value={20}>England</MenuItem>
-                        <MenuItem value={30}>Australia</MenuItem>
+                        <MenuItem value={10}>England</MenuItem>
+                        <MenuItem value={10}>Australia</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
@@ -373,8 +373,8 @@ function Home(props) {
                     <FormControl fullWidth>
                       <Select onChange={handleCountryChange} value={country}>
                         <MenuItem value={10}>United State</MenuItem>
-                        <MenuItem value={20}>England</MenuItem>
-                        <MenuItem value={30}>Australia</MenuItem>
+                        <MenuItem value={10}>England</MenuItem>
+                        <MenuItem value={10}>Australia</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
@@ -386,8 +386,8 @@ function Home(props) {
                     <FormControl fullWidth>
                       <Select onChange={handleCountryChange} value={country}>
                         <MenuItem value={10}>United State</MenuItem>
-                        <MenuItem value={20}>England</MenuItem>
-                        <MenuItem value={30}>Australia</MenuItem>
+                        <MenuItem value={10}>England</MenuItem>
+                        <MenuItem value={10}>Australia</MenuItem>
                       </Select>
                     </FormControl>
                   </Box>
