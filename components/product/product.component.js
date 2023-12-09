@@ -151,6 +151,7 @@ function Product(props) {
                 bgcolor: "#FFF",
                 borderRadius: 1,
                 py: 4,
+               
               }}
             >
               <Typography
