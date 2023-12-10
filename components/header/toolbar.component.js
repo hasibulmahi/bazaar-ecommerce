@@ -60,7 +60,7 @@ function Toolbar(props) {
             <Select
               labelId="demo-simple-select-label"
               id="demo-simple-select"
-              value={"Ten"}
+              value={10}
               label="Age"
               //   onChange={handleChange}
             >
