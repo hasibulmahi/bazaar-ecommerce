@@ -2,7 +2,6 @@ import {
   Box,
   Dialog,
   DialogContent,
-  DialogTitle,
   Grid,
   IconButton,
   Rating,
