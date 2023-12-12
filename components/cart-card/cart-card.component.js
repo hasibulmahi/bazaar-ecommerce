@@ -26,13 +26,13 @@ function CartCard({ openCart, item, handleCloseCart }) {
       open={openCart}
       maxWidth="md"
     >
-      <DialogTitle
+      {/* <DialogTitle
         sx={{
           textAlign: "center",
         }}
       >
         Your Product
-      </DialogTitle>
+      </DialogTitle> */}
       <DialogContent>
         <Grid container>
           <Grid item sm={6}>
