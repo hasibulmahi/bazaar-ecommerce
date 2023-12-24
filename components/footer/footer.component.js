@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Link, Typography } from "@mui/material";
+import { Box, Button, Grid, IconButton, Link, Typography } from "@mui/material";
 import React from "react";
 import { footerMenus } from "./footer.seeds";
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
