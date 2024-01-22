@@ -33,7 +33,7 @@ function Trending({ tendingSx }) {
           </Grid>
         ))}
     </Grid>
-      {/* Grid item start */}
+    //   {/* Grid item start */}
     // </Grid>
   );
 }
