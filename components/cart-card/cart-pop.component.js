@@ -76,7 +76,12 @@ function CartPop({ showCarts, anchorEl, handleCartPopClose, id }) {
           )}
         </Box>
       </Box>
+      <Box sx={{
+        px: 1,
+        py: 1
+      }}>
       <Button color="error" variant="outlined" href="/cart">View Cart</Button>
+      </Box>
     </Popover>
   );
 }
