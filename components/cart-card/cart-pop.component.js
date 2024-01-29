@@ -68,7 +68,9 @@ function CartPop({ showCarts, anchorEl, handleCartPopClose, id }) {
 
         <Box>
           {cartProducts.length > 0 ? (
-            <Typography>
+            <Typography sx={{
+              color: "#D23F57"
+            }}>
               Total Price: ${calculateTotalPrice(cartProducts).toFixed(2)}
             </Typography>
           ) : (
@@ -80,7 +82,10 @@ function CartPop({ showCarts, anchorEl, handleCartPopClose, id }) {
         px: 1,
         py: 1
       }}>
-      <Button color="error" variant="outlined" href="/cart">View Cart</Button>
+      <Button sx={{
+        display: "flex",
+        justifyContent: "center"
+      }} color="error" variant="outlined" href="/cart">View Cart</Button>
       </Box>
     </Popover>
   );
