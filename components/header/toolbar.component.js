@@ -56,12 +56,12 @@ function Toolbar(props) {
               mr: 2,
             }}
           >
-            <InputLabel id="demo-simple-select-label">Age</InputLabel>
+            {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
             <Select
-              labelId="demo-simple-select-label"
+              // labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={10}
-              label="Age"
+              // label="Age"
               //   onChange={handleChange}
             >
               <MenuItem value={10}>USD</MenuItem>
