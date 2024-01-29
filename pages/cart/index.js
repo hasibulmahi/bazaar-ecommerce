@@ -105,13 +105,7 @@ function Home(props) {
             >
               1. Cart
             </Button>
-            <CartButton
-              buttonSx={{
-                backgroundColor: "#129",
-              }}
-            >
-              2. Delivery Info
-            </CartButton>
+            <CartButton>2. Delivery Info</CartButton>
             {/* <Button
               sx={{
                 backgroundColor: "#FCE9EC",
