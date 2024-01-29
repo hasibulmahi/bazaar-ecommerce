@@ -76,7 +76,7 @@ function CartPop({ showCarts, anchorEl, handleCartPopClose, id }) {
           )}
         </Box>
       </Box>
-      <Link href="/cart">View Cart</Link>
+      <Button href="/cart">View Cart</Button>
     </Popover>
   );
 }
