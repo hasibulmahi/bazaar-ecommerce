@@ -29,7 +29,7 @@ function BazaarButton({
         {text}
       </Button>
       <br />
-      <Button onClick={() => removeCartProducts(item)}>remove</Button>
+      {/* <Button onClick={() => removeCartProducts(item)}>remove</Button> */}
     </>
   );
 }
