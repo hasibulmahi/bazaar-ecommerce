@@ -54,7 +54,7 @@ function Footer(props) {
             <Typography
               sx={{
                 mb: 2,
-                color: "#C1CDD7"
+                color: "#C1CDD7",
               }}
               variant="body2"
               fontSize={14}
