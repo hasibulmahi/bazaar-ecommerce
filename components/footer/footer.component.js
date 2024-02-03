@@ -149,7 +149,7 @@ function Footer(props) {
                       variant="text"
                       href={`/${item.href}`}
                       color={"#C1CDD7"}
-                      fontSize={14}
+                      fontSize={12}
                       mb={1}
                     >
                       {item.text}
