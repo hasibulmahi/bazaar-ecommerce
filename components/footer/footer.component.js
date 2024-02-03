@@ -68,8 +68,8 @@ function Footer(props) {
                 alignItems: "flex-start",
                 flexFlow: {
                   lg: "row",
-                  xs: "column"
-                }
+                  xs: "column",
+                },
               }}
             >
               <Image
@@ -78,15 +78,17 @@ function Footer(props) {
                 height={50}
                 alt="Play Store"
               />
-              <Box sx={{
-                ml: {
-                  lg: 1
-                },
-                mt: {
-                  xs: 1,
-                  lg: 0
-                }
-              }}>
+              <Box
+                sx={{
+                  ml: {
+                    lg: 1,
+                  },
+                  mt: {
+                    xs: 1,
+                    lg: 0,
+                  },
+                }}
+              >
                 <Image
                   src="/app-store.png"
                   width={150}
@@ -113,7 +115,7 @@ function Footer(props) {
                 [...footerMenus].splice(0, 5).map((item, i) => {
                   return (
                     <Link
-                    fontFamily={"Open Sans"}
+                      fontFamily={"Open Sans"}
                       underline="none"
                       variant="body-2"
                       href={`/${item.href}`}
@@ -144,7 +146,7 @@ function Footer(props) {
                 [...footerMenus].splice(5, 7).map((item, i) => {
                   return (
                     <Link
-                    fontFamily={"Open Sans"}
+                      fontFamily={"Open Sans"}
                       underline="none"
                       variant="text"
                       href={`/${item.href}`}
