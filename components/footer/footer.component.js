@@ -113,6 +113,7 @@ function Footer(props) {
                 [...footerMenus].splice(0, 5).map((item, i) => {
                   return (
                     <Link
+                    fontFamily={"Open Sans"}
                       underline="none"
                       variant="body-2"
                       href={`/${item.href}`}
