@@ -33,7 +33,10 @@ function Home(props) {
                   <Button variant="outlined">Option 1</Button>
                   <Button variant="outlined">Option 1</Button>
                 </Box>
-                
+                <Typography>Price: $244.00</Typography>
+                <Typography>Stock Available</Typography>
+                <Button variant="contained">Add To Cart</Button>
+                <Typography>Sold By</Typography>
               </Box>
             </Grid>
           </Grid>
