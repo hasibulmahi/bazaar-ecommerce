@@ -13,7 +13,7 @@ function Home(props) {
         }}
       >
         <Container>
-          <Grid container>
+          <Grid container py={5}>
             <Grid item sm={6}>
               <Box>
                 <Image
@@ -26,7 +26,7 @@ function Home(props) {
             </Grid>
             <Grid item sm={6}>
               <Box>
-                <Typography>Premium T-Shirt</Typography>
+                <Typography variant="h4" fontWeight={600} >Premium T-Shirt</Typography>
                 <Typography>Brand: Xiaomi</Typography>
                 <Typography>Rating: ****** (50)</Typography>
                 <Box>
@@ -36,7 +36,7 @@ function Home(props) {
                 <Typography>Price: $244.00</Typography>
                 <Typography>Stock Available</Typography>
                 <Button variant="contained">Add To Cart</Button>
-                <Typography>Sold By</Typography>
+                <Typography>Sold By: Mobile Store</Typography>
               </Box>
             </Grid>
           </Grid>
