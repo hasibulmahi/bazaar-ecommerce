@@ -58,7 +58,7 @@ function Toolbar(props) {
           >
             {/* <InputLabel id="demo-simple-select-label">Age</InputLabel> */}
             <Select
-              // labelId="demo-simple-select-label"
+              labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={10}
               // label="Age"
