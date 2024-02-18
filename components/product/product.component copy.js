@@ -271,12 +271,12 @@ function Product(props) {
           </Grid>
           <Grid item sm={12}>
             <Box>
-              {/* write your code and logic */}
-              {categoryProducts && categoryProducts.length > 4 && (
+              write your code and logic
+              {/* {categoryProducts && categoryProducts.length > 4 && (
               <Button href={`/category/${categorySlug}`} variant="contained">
                 Show more
               </Button>
-            )}
+            )} */}
             </Box>
           </Grid>
         </Grid>
