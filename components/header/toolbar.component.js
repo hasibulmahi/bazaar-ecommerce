@@ -61,7 +61,7 @@ function Toolbar(props) {
               // labelId="demo-simple-select-label"
               id="demo-simple-select"
               value={10}
-              // label="Age"
+              label="Age"
               //   onChange={handleChange}
             >
               <MenuItem value={10}>USD</MenuItem>
