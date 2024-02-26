@@ -1,6 +1,6 @@
 import { categoryList } from "@/components/category/category-seeds";
 import { useRouter } from "next/router";
-// import React, { useEffect } from "react";
+import React, { useEffect } from "react";
 
 function CategoryPage(props) {
   const router = useRouter();
