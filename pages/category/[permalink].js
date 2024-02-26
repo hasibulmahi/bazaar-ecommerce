@@ -16,7 +16,7 @@ function CategoryPage(props) {
       });
   }, [permalink]);
 
-  console.log("router", router);
+  // console.log("router", router);
   return <div>I am {permalink} page</div>;
 }
 
