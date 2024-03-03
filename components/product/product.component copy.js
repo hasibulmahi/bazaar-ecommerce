@@ -18,12 +18,12 @@ import { categoryList } from "../category/category-seeds";
 import CartCard from "../cart-card/cart-card.component";
 import Slider from "react-slick";
 
-// const settings = {
-//   dots: true,
-//   infinite: true,
-//   speed: 500,
-//   slidesToShow: 2,
-//   slidesToScroll: 2,
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 2,
+  slidesToScroll: 2,
 
 //   // responsive: [
 //   //   {
