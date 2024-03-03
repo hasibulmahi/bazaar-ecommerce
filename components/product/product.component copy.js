@@ -18,7 +18,7 @@ import { categoryList } from "../category/category-seeds";
 import CartCard from "../cart-card/cart-card.component";
 import Slider from "react-slick";
 
-const settings = {
+// const settings = {
 //   dots: true,
 //   infinite: true,
 //   speed: 500,
