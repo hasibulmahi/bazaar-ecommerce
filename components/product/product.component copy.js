@@ -73,7 +73,7 @@ function Product(props) {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
-    responsive: [
+    // responsive: [
     //   {
     //     breakpoint: 1024,
     //     settings: {
