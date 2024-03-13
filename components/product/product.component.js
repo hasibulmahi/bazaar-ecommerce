@@ -286,9 +286,7 @@ function Product(props) {
             <Box>
               {/* write your code and logic */}
               {/* {categoryProducts && categoryProducts.length > 4 && (
-              <Button href={`/category/${categorySlug}`} variant="contained">
-                Show more
-              </Button>
+              
             )} */}
             </Box>
           </Grid>
