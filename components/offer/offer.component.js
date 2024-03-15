@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import BazaarButton from "../ui/button.component";
-
+import Image from "next/image";
 
 function Offer(props) {
   return (
@@ -13,13 +13,10 @@ function Offer(props) {
       }}
     >
       <Grid container alignItems={"center"}>
-        <Grid
-          item
-          sm={10}
-          sx={{
-            pl: 5,
-          }}
-        >
+        <Grid item sm={2}>
+          <Image src={"/gift.png"} alt="img" height={100} width={200} />
+        </Grid>
+        <Grid item sm={8}>
           <Box
             sx={{
               display: "flex",
