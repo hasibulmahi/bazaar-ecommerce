@@ -1,11 +1,11 @@
-import React from "react";
+// import React from "react";
 
-function Home(props) {
-  return (
-    <>
-      <Layout></Layout>
-    </>
-  );
-}
+// function Home(props) {
+//   return (
+//     <>
+//       <Layout></Layout>
+//     </>
+//   );
+// }
 
-export default Home;
+// export default Home;
