@@ -1,7 +1,7 @@
 export const productList = [
   {
     id: "23436fdjku7mnf5655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Premium T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -11,7 +11,7 @@ export const productList = [
   },
   {
     id: "23436fdjkio9025655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-2.webp",
     title: "Low T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -21,7 +21,7 @@ export const productList = [
   },
   {
     id: "2343hhlknjkif5655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Hight T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -31,7 +31,7 @@ export const productList = [
   },
   {
     id: "23436fiod465kif5655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-2.webp",
     title: "Super High T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -41,7 +41,7 @@ export const productList = [
   },
   {
     id: "23436fdgd79j655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Normal T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -51,7 +51,7 @@ export const productList = [
   },
   {
     id: "23436fd8iuhdf5658ju",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-2.webp",
     title: "Pro T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -61,7 +61,7 @@ export const productList = [
   },
   {
     id: "23436fdgdfo89uim85g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Pro max T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -71,7 +71,7 @@ export const productList = [
   },
   {
     id: "92342398fdf49893",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "ultra T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -81,7 +81,7 @@ export const productList = [
   },
   {
     id: "8909j55jjkjjhghjb",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Hudai T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -91,7 +91,7 @@ export const productList = [
   },
   {
     id: "23436fdgd875658ju",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "erf T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -101,7 +101,7 @@ export const productList = [
   },
   {
     id: "23436fdg6yf5658ju",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Premium T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -111,7 +111,7 @@ export const productList = [
   },
   {
     id: "23436fdg8ukyf5658ju",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Premium T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",
@@ -121,7 +121,7 @@ export const productList = [
   },
   {
     id: "23436fdgdf5uim85g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Premium T-Shirt",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius massa id ut mattis. Facilisis vitae gravida egestas ac account.",

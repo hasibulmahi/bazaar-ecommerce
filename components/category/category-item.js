@@ -35,7 +35,7 @@ function CategoryItem({ categoryImage, categorySlug, categoryTitle }) {
           pb: 3,
         }}
       >
-        <Image src={categoryImage} width={100} height={100} alt="img" />
+        <Image src={categoryImage} width={170} height={100} alt="img" />
       </Box>
 
       <Link href={categorySlug} passHref>

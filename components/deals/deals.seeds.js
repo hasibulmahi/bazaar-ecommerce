@@ -3,7 +3,7 @@ import BazaarButton from "../ui/button.component";
 export const dealList = [
   {
     id: "23436fdgdf5655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Premium T-Shirt",
     price: "350",
     totalRating: 3.5,
@@ -11,7 +11,7 @@ export const dealList = [
   },
   {
     id: "23436fdjkif5655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-2.webp",
     title: "Premium T-Shirt",
     price: "350",
     totalRating: 3,
@@ -19,7 +19,7 @@ export const dealList = [
   },
   {
     id: "23436fdgd79j655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Premium T-Shirt",
     price: "350",
     totalRating: 4.5,
@@ -27,7 +27,7 @@ export const dealList = [
   },
   {
     id: "23436fdgdf5658ju",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-2.webp",
     title: "Premium T-Shirt",
     price: "350",
     totalRating: 4,
@@ -35,7 +35,7 @@ export const dealList = [
   },
   {
     id: "23436fdgdf5uim85g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Premium T-Shirt",
     price: "350",
     totalRating: 4.2,
@@ -43,7 +43,7 @@ export const dealList = [
   },
   {
     id: "23436fdgdf5655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-2.webp",
     title: "Premium T-Shirt",
     price: "350",
     totalRating: 3.5,
@@ -51,7 +51,7 @@ export const dealList = [
   },
   {
     id: "23436fdjkif5655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Premium T-Shirt",
     price: "350",
     totalRating: 3,
@@ -59,7 +59,7 @@ export const dealList = [
   },
   {
     id: "23436fdgd79j655g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-2.webp",
     title: "Premium T-Shirt",
     price: "350",
     totalRating: 4.5,
@@ -67,7 +67,7 @@ export const dealList = [
   },
   {
     id: "23436fdgdf5658ju",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Premium T-Shirt",
     price: "350",
     totalRating: 4,
@@ -75,7 +75,7 @@ export const dealList = [
   },
   {
     id: "23436fdgdf5uim85g",
-    image: "/t-shirt.jpg",
+    image: "/t-shirt-1.webp",
     title: "Premium T-Shirt",
     price: "350",
     totalRating: 4.2,
