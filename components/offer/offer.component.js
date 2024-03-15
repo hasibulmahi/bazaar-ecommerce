@@ -9,7 +9,7 @@ function Offer(props) {
       sx={{
         bgcolor: "#E8ECEF",
         mb: 3,
-        py: "20px",
+        py: "30px",
       }}
     >
       <Grid container alignItems={"center"}>
