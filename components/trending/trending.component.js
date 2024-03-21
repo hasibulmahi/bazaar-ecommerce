@@ -34,7 +34,7 @@ function Trending({ tendingSx }) {
         ))}
     </Grid>
     //   {/* Grid item start */}
-    // </Grid>
+    </Grid>
   );
 }
 
