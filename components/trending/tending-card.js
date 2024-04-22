@@ -48,7 +48,7 @@ function TrendingCard({
           xs: 1.5,
           lg: 5,
         },
-        // bgcolor: `${trendingCardColor[i]}`,
+        bgcolor: `${trendingCardColor[i]}`,
         ...tendingSx,
       }}
     >
