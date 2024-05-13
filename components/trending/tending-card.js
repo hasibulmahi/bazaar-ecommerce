@@ -22,7 +22,7 @@ function TrendingCard({
   const smOrUp = useMediaQuery(theme.breakpoints.up("sm"));
   // const xsOrDown = useMediaQuery(theme.breakpoints.down("xs"));
 
-  console.log("mdOrDown=", mdOrDown, "smOrUp=", smOrUp);
+  // console.log("mdOrDown=", mdOrDown, "smOrUp=", smOrUp);
 
   return (
     <Box
